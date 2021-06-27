@@ -92,7 +92,7 @@
 ;; class of document type
 (setf document_object (make-instance 'document))
 
-;; (plump:attributes document) will return a map contaning key and value pairs of the attributes
+;; (plump:attributes document) will return a map containing  key and value pairs of the attributes
 (setf attributes_map (plump:attributes document) )
 
 ;; vector to store values of attributes of document
@@ -126,7 +126,7 @@
  
   (setf cell (aref cells i ))
   
-    ;;cell_obkect is a instance of cell object
+    ;;cell_object is a instance of cell object
     (setf cell_object (make-instance 'cell))
 
     ;; array to store attributes of the cell
@@ -138,7 +138,7 @@
 
   (maphash #'(lambda (key value) 
                
-               ;;store key value in the sturctre attributes
+               ;;store key value in the structure attributes
 
              (setf item (make-instance 'attribute))
              
@@ -187,7 +187,7 @@
 
           (maphash #'(lambda (key value) 
                      
-              ;;store key value in the sturctre attributes
+              ;;store key value in the structure attributes
              (setf item (make-instance 'attribute))
              (setf (attribute-name item) key)
              (setf (attribute-value item) value)
@@ -203,7 +203,7 @@
             ;; lines if a vector of all the line in the editor
             (setf lines (plump:CHILD-ELEMENTS editor)) 
         
-                ;;to stores all the line off the input
+                ;;to stores all the line of the input
             (setf input_lines_array  (make-array 0 :fill-pointer 0 :adjustable t) )
 
               ;; looping through the lines
@@ -242,7 +242,7 @@
 
          (maphash #'(lambda (key value) 
                     
-                    ;;store key value in the sturctre attributes
+                    ;;store key value in the structure attributes
              (setf item (make-instance 'attribute))
             
              (setf (attribute-name item) key)
