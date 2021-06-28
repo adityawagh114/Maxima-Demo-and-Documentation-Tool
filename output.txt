@@ -1,0 +1,1929 @@
+
+ Element tag Name = wxMaximaDocumentAttributes of wxMaximaDocument-->
+ Attribute name = version    Attribute value = 1.5 
+ Attribute name = zoom    Attribute value = 100 
+ Attribute name = activecell    Attribute value = 73 
+ 
+ 
+ 
+ 
+ 
+ No of Cells--> 119
+
+ Attributes of cell-->
+ Attribute name = type    Attribute value = section 
+ Attribute name = sectioning_level    Attribute value = 2 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = section 
+ Attribute name = sectioning_level    Attribute value = 2 
+
+ No of lines = 1 
+ Lines-->
+  All cell types 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Subsection cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ No of lines = 1 
+ Lines-->
+  Sub-sub-section cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 5 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 5 
+
+ No of lines = 1 
+ Lines-->
+  Sub-sub-sub-section cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 6 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 6 
+
+ No of lines = 1 
+ Lines-->
+  Sub-sub-sub-sub-section cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  A text cell 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  This is a text cell. 
+  It spans over two lines. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Line wrapping in extremely long cells: abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  An extremely long word: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz 
+  TEst 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  Two extremely long words: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz 
+  TEst 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Two subsequent spaces between words: abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef   
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+   A space in front of a long line: abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef   
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  A text cell that begins and ends with a newline. 
+   
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 3 
+ Lines-->
+  Letters with spaces inbetween: 
+   
+  a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 1 2 3 4 5 6 7 8 9 10 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  Letters with non-breakable spaces inbetween: 
+  aÂ bÂ cÂ dÂ eÂ fÂ gÂ hÂ iÂ jÂ kÂ lÂ mÂ nÂ oÂ pÂ qÂ rÂ sÂ tÂ uÂ vÂ wÂ xÂ yÂ zÂ AÂ BÂ CÂ DÂ EÂ FÂ GÂ HÂ IÂ JÂ KÂ LÂ MÂ NÂ OÂ PÂ QÂ RÂ SÂ TÂ UÂ VÂ WÂ XÂ YÂ ZÂ 1Â 2Â 3Â 4Â 5Â 6Â 7Â 8Â 9Â 10 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ No of lines = 1 
+ Lines-->
+  A subsubsection cell 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Simple input and output cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Simple input cells without output cell 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  x(n):=sum(x[i],i,1,n)$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 2 
+ Lines-->
+  y(n):=sum(y[i],i,1,n)$ 
+  z(n):=sum(z[i],i,1,n)$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  A input cell with output cell 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  x; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  A simple input cell containing a line break 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 2 
+ Lines-->
+  x+ 
+  y; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  What happens if the output is multiple lines long? 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  x(1)=1;x(10)=1;x(100)=1; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  All ways to express a multiplication in TeX 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  Variable letters that are longer than one character are distinguished by multiplications of single-letter variable names by using \mathit{}. 
+  This means that in this case wxMaxima will have to do the spacing shown in the following output cell by hand. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 7 
+ Lines-->
+  a*b; 
+  aa*b; 
+  a*bb; 
+  a_1*b; 
+  a_1*bb; 
+  a*b_1; 
+  aa*b_1; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Remembering answers 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  The following cell should answer two questions automatically with "y" and "n": 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+ Attribute name = question1    Attribute value = <math><st>Is </st><mi>n</mi><st> an </st><mi>integer</mi><st>?</st></math> 
+ Attribute name = answer1    Attribute value = n; 
+ Attribute name = question2    Attribute value = Question #2 
+ Attribute name = answer2    Attribute value = n; 
+ Attribute name = question3    Attribute value = <math><st>Is </st><mi>y</mi><st> an </st><mi>integer</mi><st>?</st></math> 
+ Attribute name = answer3    Attribute value = y; 
+ Attribute name = question4    Attribute value = Question #1 
+ Attribute name = answer4    Attribute value = y; 
+ Attribute name = auto_answer    Attribute value = yes 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  askinteger(y); 
+  askinteger(n); 
+  kill(y)$kill(n)$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  abs 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  abs(x(1)); 
+  abs(x(10)); 
+  abs(x(100)); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  diff 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  'diff(x(1),t); 
+  'diff(x(10),t); 
+  'diff(x(100),t); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  at 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  x(1)@10; 
+  x(10)@a; 
+  x(100)@t33; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  A conjugate cell 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 41 
+ Lines-->
+  declare( 
+      [ 
+   c00,c01,c02,c03,c04,c05,c06,c07,c08,c09, 
+          c10,c11,c12,c13,c14,c15,c16,c17,c18,c19, 
+          c20,c21,c22,c23,c24,c25,c26,c27,c28,c29, 
+          c30,c31,c32,c33,c34,c35,c36,c37,c38,c39, 
+          c40,c41,c42,c43,c44,c45,c46,c47,c48,c49, 
+          c50,c51,c52,c53,c54,c55,c56,c57,c58,c59, 
+          c60,c61,c62,c63,c64,c65,c66,c67,c68,c69, 
+          c70,c71,c72,c73,c74,c75,c76,c77,c78,c79, 
+          c80,c81,c82,c83,c84,c85,c86,c87,c88,c89, 
+          c90,c91,c92,c93,c94,c95,c96,c97,c98,c99, 
+          c100 
+      ], complex)$ 
+  depends( 
+      [ 
+          c00,c01,c02,c03,c04,c05,c06,c07,c08,c09, 
+          c10,c11,c12,c13,c14,c15,c16,c17,c18,c19, 
+      c20,c21,c22,c23,c24,c25,c26,c27,c28,c29, 
+          c30,c31,c32,c33,c34,c35,c36,c37,c38,c39, 
+          c40,c41,c42,c43,c44,c45,c46,c47,c48,c49, 
+  c50,c51,c52,c53,c54,c55,c56,c57,c58,c59, 
+          c60,c61,c62,c63,c64,c65,c66,c67,c68,c69, 
+          c70,c71,c72,c73,c74,c75,c76,c77,c78,c79, 
+          c80,c81,c82,c83,c84,c85,c86,c87,c88,c89, 
+          c90,c91,c92,c93,c94,c95,c96,c97,c98,c99, 
+          c100 
+      ], t)$ 
+  c_1:  c00$ 
+  c_10: c00+c01+c02+c03+c04+c05+c06+c07+c08+c09$ 
+  c_100:c00+c01+c02+c03+c04+c05+c06+c07+c08+c09+ 
+        c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+ 
+        c20+c21+c22+c23+c24+c25+c26+c27+c28+c29+ 
+        c30+c31+c32+c33+c34+c35+c36+c37+c38+c39+ 
+        c40+c41+c42+c43+c44+c45+c46+c47+c48+c49+ 
+        c50+c51+c52+c53+c54+c55+c56+c57+c58+c59+ 
+        c60+c61+c62+c63+c64+c65+c66+c67+c68+c69+ 
+        c70+c71+c72+c73+c74+c75+c76+c77+c78+c79+ 
+   c80+c81+c82+c83+c84+c85+c86+c87+c88+c89+ 
+        c90+c91+c92+c93+c94+c95+c96+c97+c98+c99+ 
+        c100$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  conjugate(c_1); 
+  conjugate(c_10); 
+  conjugate(c_100); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  ExptCells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  exp(sum(x[i],i,1,1)); 
+  exp(sum(x[i],i,1,3)); 
+  exp(sum(x[i],i,1,100)); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  exp(sum(x[i]/2,i,1,1)); 
+  exp(sum(x[i]/2,i,1,3)); 
+  exp(sum(x[i]/2,i,1,100)); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Frac cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 5 
+ Lines-->
+  Here we test  
+   * if a minus in front of and following the fraction is displayed right, 
+   * If fractions still work if the denominator is bigger than the numerator 
+     or vice versa 
+   * if extremely long fractions are broken into a separate lines 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  x(1)/y(1); 
+  x(1)/y(10); 
+  x(1)/y(100);x(10)/y(1);x(100)/y(1); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  (a_1+1/(1+(a_2+1/(a_3+1/a_4))))/(b_1+1/(1+(b_2+1/(b_3+1/b_4))))=5; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 4 
+ Lines-->
+  a:1/b$ 
+  for i:1 thru 75 do a:subst(b=1/b+1,a)$ 
+  a; 
+  kill(a)$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Function cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  f(x):=3; 
+  f12345689(x):=3; 
+  f12345689012345689012345689012345689012345689012345689012345689012345689012345689012345689(x):=3; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Image cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  An image cell in the middle of the output. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Integral cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  f(n):=sum(f[i](t),i,1,n)$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  integrate(f(1),t,0,T); 
+  integrate(f(10),t,0,T); 
+  integrate(f(100),t,0,T); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  'integrate(sin(x),x,1,a(x)/b(x)); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  'integrate(sin(x),x,a(x)/b(x),1); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Limit cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  'limit(f(  1),t,0); 
+  'limit(f(  1),t,inf); 
+  'limit(f(  1),t,-inf); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  'limit(f( 10),t,0); 
+  'limit(f( 10),t,inf); 
+  'limit(f( 10),t,-inf); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  'limit(f(100),t,0); 
+  'limit(f(100),t,inf); 
+  'limit(f(100),t,-inf); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Matrix cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ No of lines = 1 
+ Lines-->
+  Rounded parenthesis 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  lmxchar:"("$rmxchar:")"$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 12 
+ Lines-->
+  funmake('matrix,   
+      [makelist(i,i,1,10)] 
+  ); 
+  funmake('matrix,   
+      makelist([i],i,1,10) 
+  ); 
+  funmake('matrix,   
+      makelist( 
+          makelist(o+10*i-10,o,1,10) 
+      ,i,1,10 
+  ) 
+  ); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ No of lines = 1 
+ Lines-->
+  Square parenthesis 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  lmxchar:"["$rmxchar:"]"$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 12 
+ Lines-->
+  funmake('matrix,   
+      [makelist(i,i,1,10)] 
+  ); 
+  funmake('matrix,   
+      makelist([i],i,1,10) 
+  ); 
+  funmake('matrix,   
+      makelist( 
+          makelist(o+10*i-10,o,1,10) 
+      ,i,1,10 
+  ) 
+  ); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 4 
+
+ No of lines = 1 
+ Lines-->
+  No parenthesis 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  lmxchar:" "$rmxchar:" "$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 12 
+ Lines-->
+  funmake('matrix,   
+      [makelist(i,i,1,10)] 
+  ); 
+  funmake('matrix,   
+      makelist([i],i,1,10) 
+  ); 
+  funmake('matrix,   
+      makelist( 
+          makelist(o+10*i-10,o,1,10) 
+      ,i,1,10 
+  ) 
+  ); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Parenthesis cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 4 
+ Lines-->
+  There are three types of parenthesis in wxMaxima: 
+   * Ordinary Parenthesis 
+   * Big parenthesis created using a special letter 
+   * And parenthesis that are assembled of an upper half, an lower half and vertical lines inbetween 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 5 
+ Lines-->
+  (x(1  )/10+1)*2; 
+  (x(10 )/10+1)*2; 
+  (x(100)/10+1)*2; 
+  max(1/10,sin((((a/b+1)/c+1)/d+1)/e)); 
+  sin(a/(b+sin(c+1/(1+d/(1+e/(1+f/(1+g/h))))))); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Test the vertical alignment 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  wecew; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a)))))))))); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Test if the vertical size is correct if big parenthesis are broken into lines. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  a;sin(a/(b+c/(d+e/f))+qdqwldwqkldkqwlk+wqwqlwqlkdkdlcs+wqqdlqqwlk+wdwqdqwqwlklwqkl+qwfwqflwfqkqwlkwqfÃ¶l+wqldkwqwlkÃ¶+aklsalcakclksa+sqlkqklwqxxqwlxwklq+aslasxklxksxlÃ¶);b; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Slide show cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  wxanimate_from_imgfiles("a.png","b.png","c.png","d.png")$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  sqrt cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  sqrt(x(1)); 
+  sqrt(x(10)); 
+  sqrt(x(100)); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Sub cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  x[x(1)]; 
+  x[x(10)]; 
+  x[x(100)]; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  x[x[x[x[1]]]]; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  SubSupcells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 5 
+ Lines-->
+  x[x(1)]^x(1)+1; 
+  x[x(1)]^x(10)+1; 
+  x[x(10)]^x(1)+1; 
+   
+  x[x(100)]^x(100)+1; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  x[x[x[x[1]]]]^y^z^a^b; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  SumCells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  f(3); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 6 
+ Lines-->
+  'sum(f(1),t,1,1); 
+  'sum(f(10),t,1,1); 
+  'sum(f(100),t,1,1); 
+  'prod(f(1),t,1,1); 
+  'prod(f(10),t,1,1); 
+  'prod(f(100),t,1,1); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Pagebreak Cells 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 4 
+ Lines-->
+  [ 
+      "test", 
+      "test2" 
+  ]$ 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Former crashes 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  The following cells at least once crashed wxMaxima on windows and are therefore 
+  included into the testbench: 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  a: (x+y)^2; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  Î±=1; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 2 
+ Lines-->
+  Î±:1; 
+  kill(Î±); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 3 
+ Lines-->
+  Bauteilwerte:[ 
+      Î±=1 
+  ]; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Constructs that don't make sense but still can be displayed 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 2 
+ Lines-->
+  (makelist(c01,i,1,2)+c01); 
+  %(1); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  {0,1}(1); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  A weird windows parenthesis issue 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  The following equation had a weird parenthesis issue on windows once while it worked fine 
+  on linux. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  f2(x,y):=x^2*(1-exp((y-sqrt(3*G)*x)^2*(L^2/x^2-0.5)*((R+y)/(R(R-K+y)))/G) )/(R+y)^2; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Mouseover ToolTips 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  A long number that (hopefully) is shortened by wxMaxima and that therefore will be equipped with a Mouseover tooltip: 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  longnum:100^ 1000; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Let's see if tooltips are provided for the insides of all cell types: 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 13 
+ Lines-->
+  abs(longnum+a); 
+  'diff(longnum*x,x+longnum); 
+  'test@longnum; 
+  conjungate(longnum+a); 
+  (a+longnum)^(b+longnum); 
+  (a+longnum)/(b+longnum); 
+  'integrate(a+''longnum,a,-longnum,longnum); 
+  'limit(a+longnum,a,longnum); 
+  matrix([longnum]); 
+  sqrt(a+longnum); 
+  a[longnum]; 
+  '(a[''longnum]^''longnum); 
+  'sum(a+''longnum,a,-longnum,longnum); 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = subsection 
+ Attribute name = sectioning_level    Attribute value = 3 
+
+ No of lines = 1 
+ Lines-->
+  Special cases for the TeX export 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  Function names should be exported as upright text: 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  function(x):=10; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 2 
+ Lines-->
+  For equations LaTeX uses a font that uses spacing that makes clear that ab means "a*b". We therefore 
+  need to make sure that a variable named "ab" isn't displayed in this way. 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 1 
+ Lines-->
+  abâ‰ a*b; 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = text 
+
+ Cell type--> Editor 
+ Attributes of editor-->
+ Attribute name = type    Attribute value = text 
+
+ No of lines = 1 
+ Lines-->
+  What makes this more complicated is that the auto-subscript mechanism adds more corner cases here: 
+
+ 
+ 
+ 
+ Attributes of cell-->
+ Attribute name = type    Attribute value = code 
+
+ Cell type--> Input 
+ Attributes of editor inside input-->
+ Attribute name = type    Attribute value = input 
+
+ No of lines = 9 
+ Lines-->
+  a_b*c; 
+  a*b_c; 
+  a_b*c; 
+  aa*b_c; 
+  a*bb_c; 
+  aa*bb_c; 
+  aa_c*b; 
+  a_c*bb; 
+  aa_c*bb; 
+
+ 
