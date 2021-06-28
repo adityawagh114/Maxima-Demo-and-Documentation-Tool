@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<wxMaximaDocument version="1.5" zoom="100" activecell="73">
+
+<cell type="section" sectioning_level="2">
+<editor type="section" sectioning_level="2">
+<line>All cell types</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Subsection cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>Sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="5">
+<editor type="subsection" sectioning_level="5">
+<line>Sub-sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="6">
+<editor type="subsection" sectioning_level="6">
+<line>Sub-sub-sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>A text cell</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>This is a text cell.</line>
+<line>It spans over two lines.</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Line wrapping in extremely long cells: abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>An extremely long word: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</line>
+<line>TEst</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Two extremely long words: abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</line>
+<line>TEst</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Two subsequent spaces between words: abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  abcdef  </line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line> A space in front of a long line: abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef abcdef  </line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>A text cell that begins and ends with a newline.</line>
+<line></line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Letters with spaces inbetween:</line>
+<line></line>
+<line>a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 1 2 3 4 5 6 7 8 9 10</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Letters with non-breakable spaces inbetween:</line>
+<line>a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 1 2 3 4 5 6 7 8 9 10</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>A subsubsection cell</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Simple input and output cells</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Simple input cells without output cell</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x(n):=sum(x[i],i,1,n)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>y(n):=sum(y[i],i,1,n)$</line>
+<line>z(n):=sum(z[i],i,1,n)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>A input cell with output cell</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>A simple input cell containing a line break</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x+</line>
+<line>y;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>What happens if the output is multiple lines long?</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x(1)=1;x(10)=1;x(100)=1;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>All ways to express a multiplication in TeX</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Variable letters that are longer than one character are distinguished by multiplications of single-letter variable names by using \mathit{}.</line>
+<line>This means that in this case wxMaxima will have to do the spacing shown in the following output cell by hand.</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a*b;</line>
+<line>aa*b;</line>
+<line>a*bb;</line>
+<line>a_1*b;</line>
+<line>a_1*bb;</line>
+<line>a*b_1;</line>
+<line>aa*b_1;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Remembering answers</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>The following cell should answer two questions automatically with &quot;y&quot; and &quot;n&quot;:</line>
+</editor>
+
+</cell>
+
+<cell type="code" question1="&lt;math&gt;&lt;st&gt;Is &lt;/st&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;st&gt; an &lt;/st&gt;&lt;mi&gt;integer&lt;/mi&gt;&lt;st&gt;?&lt;/st&gt;&lt;/math&gt;" answer1="n;" question2="Question #2" answer2="n;" question3="&lt;math&gt;&lt;st&gt;Is &lt;/st&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;st&gt; an &lt;/st&gt;&lt;mi&gt;integer&lt;/mi&gt;&lt;st&gt;?&lt;/st&gt;&lt;/math&gt;" answer3="y;" question4="Question #1" answer4="y;" auto_answer="yes">
+<input>
+<editor type="input">
+<line>askinteger(y);</line>
+<line>askinteger(n);</line>
+<line>kill(y)$kill(n)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>abs</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>abs(x(1));</line>
+<line>abs(x(10));</line>
+<line>abs(x(100));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>diff</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(x(1),t);</line>
+<line>&apos;diff(x(10),t);</line>
+<line>&apos;diff(x(100),t);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>at</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x(1)@10;</line>
+<line>x(10)@a;</line>
+<line>x(100)@t33;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>A conjugate cell</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>declare(</line>
+<line>    [</line>
+<line> c00,c01,c02,c03,c04,c05,c06,c07,c08,c09,</line>
+<line>        c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,</line>
+<line>        c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,</line>
+<line>        c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,</line>
+<line>        c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,</line>
+<line>        c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,</line>
+<line>        c60,c61,c62,c63,c64,c65,c66,c67,c68,c69,</line>
+<line>        c70,c71,c72,c73,c74,c75,c76,c77,c78,c79,</line>
+<line>        c80,c81,c82,c83,c84,c85,c86,c87,c88,c89,</line>
+<line>        c90,c91,c92,c93,c94,c95,c96,c97,c98,c99,</line>
+<line>        c100</line>
+<line>    ], complex)$</line>
+<line>depends(</line>
+<line>    [</line>
+<line>        c00,c01,c02,c03,c04,c05,c06,c07,c08,c09,</line>
+<line>        c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,</line>
+<line>    c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,</line>
+<line>        c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,</line>
+<line>        c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,</line>
+<line>c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,</line>
+<line>        c60,c61,c62,c63,c64,c65,c66,c67,c68,c69,</line>
+<line>        c70,c71,c72,c73,c74,c75,c76,c77,c78,c79,</line>
+<line>        c80,c81,c82,c83,c84,c85,c86,c87,c88,c89,</line>
+<line>        c90,c91,c92,c93,c94,c95,c96,c97,c98,c99,</line>
+<line>        c100</line>
+<line>    ], t)$</line>
+<line>c_1:  c00$</line>
+<line>c_10: c00+c01+c02+c03+c04+c05+c06+c07+c08+c09$</line>
+<line>c_100:c00+c01+c02+c03+c04+c05+c06+c07+c08+c09+</line>
+<line>      c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+</line>
+<line>      c20+c21+c22+c23+c24+c25+c26+c27+c28+c29+</line>
+<line>      c30+c31+c32+c33+c34+c35+c36+c37+c38+c39+</line>
+<line>      c40+c41+c42+c43+c44+c45+c46+c47+c48+c49+</line>
+<line>      c50+c51+c52+c53+c54+c55+c56+c57+c58+c59+</line>
+<line>      c60+c61+c62+c63+c64+c65+c66+c67+c68+c69+</line>
+<line>      c70+c71+c72+c73+c74+c75+c76+c77+c78+c79+</line>
+<line> c80+c81+c82+c83+c84+c85+c86+c87+c88+c89+</line>
+<line>      c90+c91+c92+c93+c94+c95+c96+c97+c98+c99+</line>
+<line>      c100$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>conjugate(c_1);</line>
+<line>conjugate(c_10);</line>
+<line>conjugate(c_100);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>ExptCells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>exp(sum(x[i],i,1,1));</line>
+<line>exp(sum(x[i],i,1,3));</line>
+<line>exp(sum(x[i],i,1,100));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>exp(sum(x[i]/2,i,1,1));</line>
+<line>exp(sum(x[i]/2,i,1,3));</line>
+<line>exp(sum(x[i]/2,i,1,100));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Frac cells</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Here we test </line>
+<line> * if a minus in front of and following the fraction is displayed right,</line>
+<line> * If fractions still work if the denominator is bigger than the numerator</line>
+<line>   or vice versa</line>
+<line> * if extremely long fractions are broken into a separate lines</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x(1)/y(1);</line>
+<line>x(1)/y(10);</line>
+<line>x(1)/y(100);x(10)/y(1);x(100)/y(1);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>(a_1+1/(1+(a_2+1/(a_3+1/a_4))))/(b_1+1/(1+(b_2+1/(b_3+1/b_4))))=5;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a:1/b$</line>
+<line>for i:1 thru 75 do a:subst(b=1/b+1,a)$</line>
+<line>a;</line>
+<line>kill(a)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Function cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>f(x):=3;</line>
+<line>f12345689(x):=3;</line>
+<line>f12345689012345689012345689012345689012345689012345689012345689012345689012345689012345689(x):=3;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Image cells</line>
+</editor>
+
+</cell>
+
+
+
+<cell type="text">
+<editor type="text">
+<line>An image cell in the middle of the output.</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Integral cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>f(n):=sum(f[i](t),i,1,n)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>integrate(f(1),t,0,T);</line>
+<line>integrate(f(10),t,0,T);</line>
+<line>integrate(f(100),t,0,T);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;integrate(sin(x),x,1,a(x)/b(x));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;integrate(sin(x),x,a(x)/b(x),1);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Limit cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;limit(f(  1),t,0);</line>
+<line>&apos;limit(f(  1),t,inf);</line>
+<line>&apos;limit(f(  1),t,-inf);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;limit(f( 10),t,0);</line>
+<line>&apos;limit(f( 10),t,inf);</line>
+<line>&apos;limit(f( 10),t,-inf);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;limit(f(100),t,0);</line>
+<line>&apos;limit(f(100),t,inf);</line>
+<line>&apos;limit(f(100),t,-inf);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Matrix cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>Rounded parenthesis</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>lmxchar:&quot;(&quot;$rmxchar:&quot;)&quot;$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>funmake(&apos;matrix,  </line>
+<line>    [makelist(i,i,1,10)]</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist([i],i,1,10)</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist(</line>
+<line>        makelist(o+10*i-10,o,1,10)</line>
+<line>    ,i,1,10</line>
+<line>)</line>
+<line>);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>Square parenthesis</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>lmxchar:&quot;[&quot;$rmxchar:&quot;]&quot;$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>funmake(&apos;matrix,  </line>
+<line>    [makelist(i,i,1,10)]</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist([i],i,1,10)</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist(</line>
+<line>        makelist(o+10*i-10,o,1,10)</line>
+<line>    ,i,1,10</line>
+<line>)</line>
+<line>);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>No parenthesis</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>lmxchar:&quot; &quot;$rmxchar:&quot; &quot;$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>funmake(&apos;matrix,  </line>
+<line>    [makelist(i,i,1,10)]</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist([i],i,1,10)</line>
+<line>);</line>
+<line>funmake(&apos;matrix,  </line>
+<line>    makelist(</line>
+<line>        makelist(o+10*i-10,o,1,10)</line>
+<line>    ,i,1,10</line>
+<line>)</line>
+<line>);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Parenthesis cells</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>There are three types of parenthesis in wxMaxima:</line>
+<line> * Ordinary Parenthesis</line>
+<line> * Big parenthesis created using a special letter</line>
+<line> * And parenthesis that are assembled of an upper half, an lower half and vertical lines inbetween</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>(x(1  )/10+1)*2;</line>
+<line>(x(10 )/10+1)*2;</line>
+<line>(x(100)/10+1)*2;</line>
+<line>max(1/10,sin((((a/b+1)/c+1)/d+1)/e));</line>
+<line>sin(a/(b+sin(c+1/(1+d/(1+e/(1+f/(1+g/h)))))));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Test the vertical alignment</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>wecew;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a+sin(x/a))))))))));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Test if the vertical size is correct if big parenthesis are broken into lines.</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a;sin(a/(b+c/(d+e/f))+qdqwldwqkldkqwlk+wqwqlwqlkdkdlcs+wqqdlqqwlk+wdwqdqwqwlklwqkl+qwfwqflwfqkqwlkwqföl+wqldkwqwlkö+aklsalcakclksa+sqlkqklwqxxqwlxwklq+aslasxklxksxlö);b;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Slide show cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>wxanimate_from_imgfiles(&quot;a.png&quot;,&quot;b.png&quot;,&quot;c.png&quot;,&quot;d.png&quot;)$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>sqrt cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>sqrt(x(1));</line>
+<line>sqrt(x(10));</line>
+<line>sqrt(x(100));</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Sub cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x(1)];</line>
+<line>x[x(10)];</line>
+<line>x[x(100)];</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x[x[x[1]]]];</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>SubSupcells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x(1)]^x(1)+1;</line>
+<line>x[x(1)]^x(10)+1;</line>
+<line>x[x(10)]^x(1)+1;</line>
+<line></line>
+<line>x[x(100)]^x(100)+1;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x[x[x[1]]]]^y^z^a^b;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>SumCells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>f(3);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;sum(f(1),t,1,1);</line>
+<line>&apos;sum(f(10),t,1,1);</line>
+<line>&apos;sum(f(100),t,1,1);</line>
+<line>&apos;prod(f(1),t,1,1);</line>
+<line>&apos;prod(f(10),t,1,1);</line>
+<line>&apos;prod(f(100),t,1,1);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Pagebreak Cells</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>[</line>
+<line>    &quot;test&quot;,</line>
+<line>    &quot;test2&quot;</line>
+<line>]$</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Former crashes</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>The following cells at least once crashed wxMaxima on windows and are therefore</line>
+<line>included into the testbench:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a: (x+y)^2;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>α=1;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>α:1;</line>
+<line>kill(α);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>Bauteilwerte:[</line>
+<line>    α=1</line>
+<line>];</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Constructs that don&apos;t make sense but still can be displayed</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>(makelist(c01,i,1,2)+c01);</line>
+<line>%(1);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>{0,1}(1);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>A weird windows parenthesis issue</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>The following equation had a weird parenthesis issue on windows once while it worked fine</line>
+<line>on linux.</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>f2(x,y):=x^2*(1-exp((y-sqrt(3*G)*x)^2*(L^2/x^2-0.5)*((R+y)/(R(R-K+y)))/G) )/(R+y)^2;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Mouseover ToolTips</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>A long number that (hopefully) is shortened by wxMaxima and that therefore will be equipped with a Mouseover tooltip:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>longnum:100^ 1000;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Let&apos;s see if tooltips are provided for the insides of all cell types:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>abs(longnum+a);</line>
+<line>&apos;diff(longnum*x,x+longnum);</line>
+<line>&apos;test@longnum;</line>
+<line>conjungate(longnum+a);</line>
+<line>(a+longnum)^(b+longnum);</line>
+<line>(a+longnum)/(b+longnum);</line>
+<line>&apos;integrate(a+&apos;&apos;longnum,a,-longnum,longnum);</line>
+<line>&apos;limit(a+longnum,a,longnum);</line>
+<line>matrix([longnum]);</line>
+<line>sqrt(a+longnum);</line>
+<line>a[longnum];</line>
+<line>&apos;(a[&apos;&apos;longnum]^&apos;&apos;longnum);</line>
+<line>&apos;sum(a+&apos;&apos;longnum,a,-longnum,longnum);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Special cases for the TeX export</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Function names should be exported as upright text:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>function(x):=10;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>For equations LaTeX uses a font that uses spacing that makes clear that ab means &quot;a*b&quot;. We therefore</line>
+<line>need to make sure that a variable named &quot;ab&quot; isn&apos;t displayed in this way.</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>ab≠a*b;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>What makes this more complicated is that the auto-subscript mechanism adds more corner cases here:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a_b*c;</line>
+<line>a*b_c;</line>
+<line>a_b*c;</line>
+<line>aa*b_c;</line>
+<line>a*bb_c;</line>
+<line>aa*bb_c;</line>
+<line>aa_c*b;</line>
+<line>a_c*bb;</line>
+<line>aa_c*bb;</line>
+</editor>
+</input>
+</cell>
+
+</wxMaximaDocument>
