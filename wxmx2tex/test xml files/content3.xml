@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<wxMaximaDocument version="1.5" zoom="100" activecell="73">
+
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>integrate(f(1),t,0,T);</line>
+<line>integrate(f(10),t,0,T);</line>
+<line>integrate(f(100),t,0,T);</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;integrate(sin(x),x,1,a(x)/b(x));</line>
+</editor>
+</input>
+</cell>
+
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x(1)]^x(1)+1;</line>
+<line>x[x(1)]^x(10)+1;</line>
+<line>x[x(10)]^x(1)+1;</line>
+<line></line>
+<line>x[x(100)]^x(100)+1;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x[x[x[x[1]]]]^y^z^a^b;</line>
+</editor>
+</input>
+</cell>
+
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a: (x+y)^2;</line>
+</editor>
+</input>
+</cell>
+
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Special cases for the TeX export</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>Function names should be exported as upright text:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>function(x):=10;</line>
+</editor>
+</input>
+</cell>
+
+
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>ab≠a*b;</line>
+</editor>
+</input>
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>What makes this more complicated is that the auto-subscript mechanism adds more corner cases here:</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>a_b*c;</line>
+<line>a*b_c;</line>
+<line>a_b*c;</line>
+<line>aa*b_c;</line>
+<line>a*bb_c;</line>
+<line>aa*bb_c;</line>
+<line>aa_c*b;</line>
+<line>a_c*bb;</line>
+<line>aa_c*bb;</line>
+</editor>
+</input>
+</cell>
+
+</wxMaximaDocument>
