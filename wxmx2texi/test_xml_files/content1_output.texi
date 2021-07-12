@@ -1,0 +1,15 @@
+@iftex
+@tex
+\begin{verbatim}All cell types\end{verbatim}\begin{verbatim}Subsection cells\end{verbatim}\begin{verbatim}Sub-sub-section cells\end{verbatim}\begin{verbatim}Sub-sub-sub-section cells\end{verbatim}$$144$$$$b^2+a^2$$
+@end tex
+@end iftex
+@ifhtml
+@html
+<math xmlns="http://www.w3.org/1998/Math/MathML"> <mtext>All cell types</mtext><mspace linebreak='newline' /><mtext>Subsection cells</mtext><mspace linebreak='newline' /><mtext>Sub-sub-section cells</mtext><mspace linebreak='newline' /><mtext>Sub-sub-sub-section cells</mtext><mspace linebreak='newline' /><mn>144</mn> <mspace linebreak='newline' /><msup><mrow><mi>b</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow><mi>a</mi> </mrow> <mn>2</mn> </msup> <mspace linebreak='newline' /></math>
+@end html
+@end ifhtml
+@ifinfo
+@example
+All cell types, Subsection cells, Sub-sub-section cells, Sub-sub-sub-section cells, 72*2, a^2+b^2, 
+@end example
+@end ifinfo

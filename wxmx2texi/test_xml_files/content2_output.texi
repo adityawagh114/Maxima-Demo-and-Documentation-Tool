@@ -1,0 +1,15 @@
+@iftex
+@tex
+$${{x}\over{y^2+x^2}}=1$$$${{x^2}\over{y^2+x^2}}=1$$$${{b+a}\over{8}}$$$$x^4+x^3+x^2$$
+@end tex
+@end iftex
+@ifhtml
+@html
+<math xmlns="http://www.w3.org/1998/Math/MathML"> <mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow><mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow><mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> <mn>1</mn> <mspace linebreak='newline' /><mfrac><mrow><msup><mrow><mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow> <mrow><msup><mrow><mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow><mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> <mn>1</mn> <mspace linebreak='newline' /><mfrac><mrow><mi>b</mi> <mo>+</mo> <mi>a</mi> </mrow> <mrow><mn>8</mn> </mrow></mfrac> <mspace linebreak='newline' /><msup><mrow><mi>x</mi> </mrow> <mn>4</mn> </msup> <mo>+</mo> <msup><mrow><mi>x</mi> </mrow> <mn>3</mn> </msup> <mo>+</mo> <msup><mrow><mi>x</mi> </mrow> <mn>2</mn> </msup> <mspace linebreak='newline' /></math>
+@end html
+@end ifhtml
+@ifinfo
+@example
+ x/(x^2+y^2) = 1;,  x^2/(x^2+y^2) = 1;,  (a+b)/8;,  x^2+x^3+x^4;, 
+@end example
+@end ifinfo
