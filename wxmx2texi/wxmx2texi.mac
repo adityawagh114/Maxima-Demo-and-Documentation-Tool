@@ -27,7 +27,13 @@ print("Provide the Location of the XML file inside the function wxmx2texi(<locat
 
 /*  This functions takes the location of xml file as argument and prints the texinfo format. Example wxmx2texi("/home/aditya/Desktop/content.xml") */
 
-  wxmx2texi(locat,[output_location]):= (arr :(xmlparser(locat)),
+
+
+  wxmx2texi(locat,[output_location]):= (
+    /* return location of xml file from .wxmx file */
+      locat:(unzipfile(locat)),
+    
+      arr :(xmlparser(locat)),
     
   
   /* looping till the end of the array  (Wx-endofloop is added at the end of the array to identify the last object) */
