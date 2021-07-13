@@ -16,6 +16,11 @@
    (ensure-directories-exist (pathname dest) )
 
    (zip:unzip (pathname newsrc) (pathname dest) ) 
+
+   (setf rename_newsrc (subseq newsrc 0 (- (length newsrc  ) 4 )))
+   (setf rename_newsrc   (concatenate 'string rename_newsrc ".wxmx" ))
+   (rename-file (pathname newsrc) (pathname rename_newsrc) )
+
    (setf dest (concatenate 'string dest "content.xml")))
 
 
