@@ -13,4 +13,4 @@ The purpose of this project is to create functions which convert a wxMaxima work
 
 
 ## Required dependencies 
-- [QuickLisp](https://www.quicklisp.org/beta/) to Load the XML Parser.
+- [QuickLisp](https://www.quicklisp.org/beta/) to Load the XML Parser and Zip file Manager.
