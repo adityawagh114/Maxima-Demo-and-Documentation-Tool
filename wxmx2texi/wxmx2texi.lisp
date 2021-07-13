@@ -3,6 +3,20 @@
 (in-package :maxima)
 ;;plump xml parser has been used https://shinmera.github.io/plump/ 
 (ql:quickload :plump)
+(ql:quickload :zip)
+
+;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
+(defun $unzipfile(src)
+   
+   (setf newsrc (subseq src 0 (- (length src  ) 5 )))
+   (setf dest (concatenate 'string newsrc "/"))
+   (setf newsrc   (concatenate 'string newsrc ".zip" ))
+
+   (rename-file (pathname src) (pathname newsrc) )
+   (ensure-directories-exist (pathname dest) )
+
+   (zip:unzip (pathname newsrc) (pathname dest) ) 
+   (setf dest (concatenate 'string dest "content.xml")))
 
 
 
