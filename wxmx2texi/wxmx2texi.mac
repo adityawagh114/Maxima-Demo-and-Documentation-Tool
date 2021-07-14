@@ -23,109 +23,14 @@ strlatex:"";
 strtexinfo:"";
 strmathml:"";
 
-print("Provide the Location of the XML file inside the function wxmx2texi(<location>) " );
-
-/*  This functions takes the location of xml file as argument and prints the texinfo format. Example wxmx2texi("/home/aditya/Desktop/content.xml") */
+print("Provide the Location of the wxmx and texi file inside the function wxmx2texi(<location>,<location>) " );
 
 
-
-  wxmx2texi(locat,[output_location]):= (
+  wxmx2texi(locat,output_location):= (
     /* return location of xml file from .wxmx file */
+     folder_name:get_folder_name(locat),
       locat:(unzipfile(locat)),
     
-      arr :(xmlparser(locat)),
-    
-  
-  /* looping till the end of the array  (Wx-endofloop is added at the end of the array to identify the last object) */
-  for i:0 while notequal(arr[i],"Wx-endofloop") do
-  (
-
-  
-    str:arr[i],
-    
-         strtexinfo:sconcat(strtexinfo,str),
-         strtexinfo:sconcat(strtexinfo,", "),
-
-       if(foo: errcatch (parse_string (str)))=[] then 
-       (
-         /*convert to simple latex text as the maxima expression is not valid */
-         
-     
-          strlatex:sconcat(strlatex,"\\begin{verbatim}"),
-          strlatex:sconcat(strlatex,str),
-          strlatex:sconcat(strlatex,"\\end{verbatim}"))
-          
-          
-       else(
-
-             /* Latex gives error if it conations alpha (α) so it is simply converted to Latex text */
-            if(ssearch("α",str)) = false then (
-                      
-               strlatex:sconcat(strlatex,"$$"),
-               strlatex:sconcat(strlatex,tex1(parse_string(str))),
-               strlatex:sconcat(strlatex,"$$"))
-          
-            else(
-
-               strlatex:sconcat(strlatex,"\\begin{verbatim}"),
-               strlatex:sconcat(strlatex,str),
-               strlatex:sconcat(strlatex,"\\end{verbatim}")))),
-
- 
-        /* Mathml is constructed from the new wmathml function   */
-        strmathml:sconcat(strmathml, "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> " ),
-
-      for i:0 while notequal(arr[i],"Wx-endofloop") do (
-
-       str:arr[i],
-
-       if(foo: errcatch (parse_string (str)))=[] then ( 
-           
-              strmathml:sconcat(strmathml,  wmathml1(str)),
-              strmathml:sconcat(strmathml,  "<mspace linebreak='newline' />"))
-        else(
-          
-           strmathml:sconcat(strmathml,  wmathml1(parse_string(str))),
-           strmathml:sconcat(strmathml,  "<mspace linebreak='newline' />"))),
-           strmathml:sconcat(strmathml, "</math>" ),
-   
-
-
-
-  /*A simple texinfo format output  */
-  
-  if emptyp(output_location) then (
-    printf(true,"~&@iftex~%@tex~%"),
-    printf(true,strlatex),
-    printf(true,"~&@end tex~%@end iftex~%"),
-
-    printf(true,"~&@ifhtml~%@html~%"),
-    printf(true,strmathml),
-    printf(true,"~&@end html~%@end ifhtml~%"),
-   
-    printf(true,"~&@ifinfo~%@example~%"),
-    printf(true,strtexinfo),
-    printf(true,"~&@end example~%@end ifinfo~%")
-
-
-  )
-
-  else
-with_stdout(output_location[1],
-
-    printf(true,"~&@iftex~%@tex~%"),
-    printf(true,strlatex),
-    printf(true,"~&@end tex~%@end iftex~%"),
-
-    printf(true,"~&@ifhtml~%@html~%"),
-    printf(true,strmathml),
-    printf(true,"~&@end html~%@end ifhtml~%"),
-   
-    printf(true,"~&@ifinfo~%@example~%"),
-    printf(true,strtexinfo),
-    printf(true,"~&@end example~%@end ifinfo~%")
-  
-)
-  );
+    xmlparser(locat,output_location,folder_name));
 
 
