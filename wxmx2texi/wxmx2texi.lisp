@@ -5,6 +5,16 @@
 (ql:quickload :plump)
 (ql:quickload :zip)
 
+
+(defun $get_folder_name(src)
+   
+   (pathname-name src)
+  
+  )
+
+
+
+
 ;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
 (defun $unzipfile(src)
    
@@ -106,7 +116,7 @@
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;function to parse the xml (pass the file location as argument. Example  (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
-(defun $xmlparser (file_location)
+(defun $xmlparser (file_location olocation folder_location)
   
 
     (defparameter str (string ""))
@@ -337,63 +347,193 @@
   (setf str (concatenate 'string "[" str ))
 ;;   (print (length strvector))
 (vector-push-extend "Wx-endofloop" strvector)
+  (printobject document_object olocation folder_location)
+
+
   strvector)
+
+
+(defun transform_string (str)
+  
+  (defparameter newstr  (make-array 0
+                                        :element-type 'character
+                                        :fill-pointer 0
+                                        :adjustable t))
+
+  (dotimes (i  (length str))
+    
+        (if (or (char= #\@ (char str i)) (char= #\{ (char str i))  (char= #\} (char str i))   )
+
+            (vector-push-extend #\@ newstr) )
+        
+        (vector-push-extend ( char str i) newstr)  )
+
+    newstr
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 ;; function to print the parsed objects (pass the object as argument). Example  (printobject (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
-(defun printobject (document_obj)
+(defun printobject (document_obj texi_location folder_location)
+    
+         (setf image_number 1)
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string 
+  
+  " \\input texinfo ~%~%@node Top, Cell1,(dir),(dir)~%@top~%"))   
 
-  (defparameter str (string ""))
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@unnumbered "))
+
+
+
+
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "Element tag Name = wxMaximaDocument  ~%@unnumberedsec Attributes of wxMaximaDocument-->   "))
+
+
+  ;; (format t " Element tag Name = wxMaximaDocument")
+
+  ;; (format t "Attributes of wxMaximaDocument-->")
+
   (setf attribute_array (document-attributes document_obj))
 
   (dotimes (i  (length attribute_array))
     
     (setf single_attribute (aref attribute_array i ))
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%@subsection Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute)  ) )
     
-    
+    ;; (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
+
 
 
     )
   
-
-                                        ;   (format t "~% ~% ~% ~% ~% ")
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~% ~% ~% ~% ~%  "))
+  ;; (format t "~% ~% ~% ~% ~% ")
   (setf cell_array (document-cells document_obj))
 
 
-                                        ;   (format t "~% No of Cells--> ~d~%~%" (length cell_array))
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%@unnumberedsec No of Cells--> ~d~%~%" (length cell_array)))
+
+   (setq startindex 1)
+  (setq endindex (length cell_array) )
+
+
+;; (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+;;   (format texinfo_string "
+;;      @end example "))
+
+
+
+  ;; (format t "~% No of Cells--> ~d~%~%" (length cell_array))
 
   (dotimes (i (length cell_array))
 
     (setf cellobject (aref cell_array i ))
     
+   (if (= startindex 1) 
+ (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@node Cell~a,Cell~a,Top,Top~%~%" startindex  ( + startindex 1) )))   
+
+           (if (= startindex endindex) 
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+      (format texinfo_string "@node Cell~a, ,Cell~a,Top~%~%
+       " startindex ( - startindex 1) )))
+
+        (if (and (< startindex endindex) (> startindex 1) )        
+      (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@node Cell~a,Cell~a,Cell~a,Top~%
+    ~%" startindex (+ startindex 1) (- startindex 1) )))
+      (setq startindex (+ startindex 1))
+      
+      
+      
+      
+
+
+
+
+ 
+
+;; (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+;;   (format texinfo_string "
+;;     @node Cell~a,Cell~a,Cell~a,Top~%
+;;     @example
+  
+  
+;;    " (startindex) (startindex+1) (startindex-1) ))
+
+
+
+
     ;;print cell attributes
-                                        ; (format t " Attributes of cell-->")
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@unnumberedsec Attributes of cell--> "))
+
+
+    ;; (format t " Attributes of cell-->")
 
     (setf attribute_array (cell-attributes cellobject))
 
     (dotimes (i  (length attribute_array))
       
       (setf single_attribute (aref attribute_array i ))
+
+      (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%@subsection Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute)))
       
-                                        ;   (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
+      ;; (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
 
 
 
       )
 
-    ;;type of cell       
-                                        ; (format t "~%~% Cell type-->")
+    ;;type of cell     
+
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%~%@unnumberedsec Cell type--> "))  
+    ;; (format t "~%~% Cell type-->")
     (setf editor_array (cell-editors cellobject))
     (setf input_array (cell-inputs cellobject))
     
     (if( = (length editor_array) 1)
        (  ;;of type editor
         progn
-                                        ; (format t " Editor ~%")
+
+
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string " Editor ~%"))  
+
+        ;; (format t " Editor ~%")
         
-                                        ; (format t " Attributes of editor-->")
+
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@unnumberedsec Attributes of editor-->"))  
+
+
+        ;; (format t " Attributes of editor-->")
 
         (setf editorobject (aref  editor_array 0))
 
@@ -404,8 +544,12 @@
         (dotimes (i  (length attribute_array))
           
           (setf single_attribute (aref attribute_array i ))
+
+
+           (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%@subsection Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute)))  
           
-                                        ;   (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
+          ;; (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
 
 
 
@@ -413,19 +557,58 @@
 
         
         (setf linesarray (editor-lines editorobject))
+            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%~% @unnumberedsec No of lines = ~d ~%@unnumberedsubsec Lines-->~%" (length linesarray)))  
         
-                                        ; (format t "~%~% No of lines = ~d ~% Lines-->~%" (length linesarray))
+        ;; (format t "~%~% No of lines = ~d ~% Lines-->~%" (length linesarray))
+
+   (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@example ~%"))  
+        
 
         (dotimes (i  (length linesarray))
+
+
+                (setf strline (aref linesarray i))
+
+                (setf strline (transform_string strline))
+
+                (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline)  )
+                    (
+                        progn
+                         
+                       ;;add image
+
+                        
+                         
+
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
+                             
+                             (setf image_number (+ 1 image_number))
+
+                    )
+                    (
+                      progn
+                         
+ 
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "  ~a ~%" strline))  
+                      
+                      
+                    )
+                
+                
+                )
+
+          ;; (format t "  ~a ~%" (aref linesarray i))
           
-        ;;  (concatenate  str (aref linesarray i) )
-          (setf str (concatenate 'string str (aref linesarray i) " "))
-    
 
 
           )
 
-        
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@end example ~%"))         
 
 
 
@@ -436,9 +619,18 @@
         )
        (  
         progn
-                                        ; (format t " Input ~%")
 
-                                        ; (format t " Attributes of editor inside input-->")
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "Input ~%"))  
+
+        
+        ;; (format t " Input ~%")
+
+
+            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@unnumberedsec Attributes of editor inside input-->"))  
+
+        ;; (format t " Attributes of editor inside input-->")
 
         (setf inputobject (aref  input_array 0))
 
@@ -449,8 +641,12 @@
         (dotimes (i  (length attribute_array))
           
           (setf single_attribute (aref attribute_array i ))
+
+
+            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%@subsection Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute)))  
           
-                                        ;   (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
+          ;; (format t "~% Attribute name = ~a    Attribute value = ~a " (attribute-name single_attribute) (attribute-value single_attribute))
 
 
 
@@ -458,17 +654,57 @@
 
         
         (setf linesarray (input-lines inputobject))
+                 (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "~%~%@unnumberedsec No of lines = ~d ~%@unnumberedsubsec Lines-->~%" (length linesarray)))  
         
-                                        ; (format t "~%~% No of lines = ~d ~% Lines-->~%" (length linesarray))
+        ;; (format t "~%~% No of lines = ~d ~% Lines-->~%" (length linesarray))
+
+
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@example ~%"))         
+
 
         (dotimes (i  (length linesarray))
           
-          (setf str (concatenate 'string str (aref linesarray i) "~%~%"))
-          
+          ;; (format t "  ~a ~%" (aref linesarray i))
 
+                 (setf strline (aref linesarray i))
+
+                (setf strline (transform_string strline))
+
+                (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline)  )
+                    (
+                        progn
+                         
+                       ;;add image
+
+                        
+                         
+
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
+                             
+                             (setf image_number (+ 1 image_number))
+
+                    )
+                    (
+                      progn
+                         
+ 
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "  ~a ~%" strline))  
+                      
+                      
+                    )
+                
+                
+                )
 
           )
 
+
+    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@end example ~%"))         
 
 
 
@@ -478,12 +714,22 @@
        
        )
     
+           (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "  ~% ~% ~% ~%"   ))  
+
+    ;; (format t "~% ~% ~% ~%")
+
+;; (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+;;   (format texinfo_string "
+;;        @end example~% "))
 
 
-
-                                        ; (format t "~% ~% ~% ~%")
 
     )
 
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+  (format texinfo_string "@bye~% "))
 
   )
+
+
