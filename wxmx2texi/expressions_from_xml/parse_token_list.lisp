@@ -21,4 +21,17 @@
 
 (defmfun $parse_token_list (l)
   (let ((*token-list* (append (cdr l) (list '$\;))))
-    (mread *standard-input* nil))) ;; doesn't actually use *STANDARD-INPUT*, but otherwise complains
+    (with-input-from-string (s "0") ;; token "0" just shows there is input present; it isn't used
+      (mread s))))
+
+;; Spurious line info shows up in the values returned by this implementation.
+#+nil (defmfun $parse_token_list (l)
+  (let ((*token-list* (append (cdr l) (list '$\;))))
+    (do
+      ((input (parse '$any 0.)
+              (parse '$any 0.)))
+      (nil)
+      (case (first-c)
+        ((|$;| |$$|)
+         (return (list (mheader (pop-c)) nil input)))
+        (t (parse-bug-err '$parse_token_list))))))
