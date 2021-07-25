@@ -19,9 +19,18 @@
       (pop *token-list*)
       (funcall g))))
 
+(defun sanitize-unicode-ops (l)
+  (let*
+    ((m (subst '$- '$− l))
+     (n (subst '$* '$· m)))
+    ;; What else? Unicode plus sign? Other multiplication signs?
+    n))
+
 (defmfun $parse_token_list (l)
   (if (every #'atom (cdr l))
-    (let ((*token-list* (append (cdr l) (list '$\;))))
+    (let*
+      ((sanitized-l (sanitize-unicode-ops (cdr l)))
+       (*token-list* (append sanitized-l (list '$\;))))
       (with-input-from-string (s "0") ;; token "0" just shows there is input present; it isn't used
         (mread s)))
     (merror "parse_token_list: every token must be an atom; found: ~M" l)))

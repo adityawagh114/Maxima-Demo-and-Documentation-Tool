@@ -23,12 +23,3 @@
 
 (defun $read_xml (f)
   (plump:first-child (plump:parse (pathname f))))
-
-;; This part is specific to wxmx output XML.
-;; Copy properties from ascii hyphen to Unicode hyphen,
-;; and from ascii asterisk to Unicode centered dot,
-;; so that those tokens are handled the same way as
-;; minus and times in Maxima expressions.
-
-(setf (symbol-plist '$−) (symbol-plist '$-))
-(setf (symbol-plist '$·) (symbol-plist '$*))
