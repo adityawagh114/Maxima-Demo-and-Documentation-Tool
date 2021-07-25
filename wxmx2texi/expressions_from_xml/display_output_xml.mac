@@ -1,0 +1,15 @@
+load ("expressions_from_xml.mac");
+load ("parse_token_list.lisp");
+
+outputs: expressions_from_xml (read_xml ("output-examples.xml"));
+
+for output in outputs
+  do block ([mth_list: split_mth (first (output))],
+            for expr_bits in mth_list
+              do block ([tokens: tokens_from (expr_bits), e],
+                        grind (expr_bits),
+                        grind (tokens),
+                        e: second (parse_token_list (tokens)),
+                        grind (e),
+                        print (e),
+                        e: display_expression_from (tokens)));
