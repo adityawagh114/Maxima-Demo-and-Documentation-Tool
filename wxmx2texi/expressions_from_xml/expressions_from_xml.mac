@@ -39,7 +39,7 @@ matchdeclare (pp, lambda ([e], not atom(e) and op(e) = p()));
 defrule (rule_for_parentheses, pp, [paren_left, args(pp), paren_right]);
 
 tokens_from (e%) :=
-  apply1 (e%, rule_for_numbers,
+ (apply1 (e%, rule_for_numbers,
               rule_for_variables,
               rule_for_greek_variables,
               rule_for_hidden_ops,
@@ -49,4 +49,11 @@ tokens_from (e%) :=
               rule_for_exponents,
               rule_for_text,
               rule_for_rows,
-              rule_for_parentheses);
+              rule_for_parentheses),
+  flatten (%%));
+
+split_mth (e%) :=
+  block ([aa: args (e%), ii],
+         ii: sublist_indices (aa, lambda ([e1], not atom(e1) and op(e1) = lbl())),
+         ii: append (ii, [length (aa) + 1]),
+         makelist (makelist (aa[i], i, ii[j] + 1, ii[j + 1] - 1), j, 1, length (ii) - 1));
