@@ -20,9 +20,11 @@
       (funcall g))))
 
 (defmfun $parse_token_list (l)
-  (let ((*token-list* (append (cdr l) (list '$\;))))
-    (with-input-from-string (s "0") ;; token "0" just shows there is input present; it isn't used
-      (mread s))))
+  (if (every #'atom (cdr l))
+    (let ((*token-list* (append (cdr l) (list '$\;))))
+      (with-input-from-string (s "0") ;; token "0" just shows there is input present; it isn't used
+        (mread s)))
+    (merror "parse_token_list: every token must be an atom; found: ~M" l)))
 
 ;; Spurious line info shows up in the values returned by this implementation.
 #+nil (defmfun $parse_token_list (l)
