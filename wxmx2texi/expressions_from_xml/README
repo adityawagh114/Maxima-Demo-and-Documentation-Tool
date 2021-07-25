@@ -1,0 +1,14 @@
+Code in this folder extracts a list of tokens from wxmx <output> XML tags
+and calls the Maxima parser to reconstitute the Maxima expression
+represented by the tokens.
+
+An example (using the output-examples.xml file in the repo) can be executed by:
+
+$ maxima --lisp clisp --batch display_output_xml.mac
+
+So far I tried Clisp and SBCL. Clisp worked, while SBCL did not.
+The problem seems to be that .lisp files are not read as Unicode
+characters. Yes, there is a :external-format flag for LOAD,
+but no, I couldn't get it to work. I'll keep trying.
+
+Other Unicode-aware Lisps might work, I didn't try any.
