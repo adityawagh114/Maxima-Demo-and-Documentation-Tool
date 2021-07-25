@@ -1,15 +1,26 @@
 load ("expressions_from_xml.mac");
 load ("parse_token_list.lisp");
 
-outputs: expressions_from_xml (read_xml ("output-examples.xml"));
+display_output_xml (f%) :=
+  block ([outputs: expressions_from_xml (read_xml (f%))],
+         print ("Process", length (outputs), "<output> tags."),
+         for output in outputs
+           do block ([mth_list: split_mth (first (output))],
+                     print ("<mth> tag comprises", length (mth_list), "labels and corresponding expressions."),
+                     for expr_bits in mth_list
+                       do block ([tokens: tokens_from (expr_bits), e],
+                                 print ("Maxima expressions corresponding to XML:"),
+                                 grind (expr_bits),
+                                 print ("List of tokens extracted:"),
+                                 grind (tokens),
+                                 e: second (parse_token_list (tokens)),
+                                 print ("Maxima expression reconstructed from tokens:"),
+                                 print ("1-d:"),
+                                 grind (e),
+                                 print ("2-d (simplified):"),
+                                 print (e),
+                                 print ("2-d (unsimplified):"),
+                                 display_expression_from (tokens),
+                                 print (""))));
 
-for output in outputs
-  do block ([mth_list: split_mth (first (output))],
-            for expr_bits in mth_list
-              do block ([tokens: tokens_from (expr_bits), e],
-                        grind (expr_bits),
-                        grind (tokens),
-                        e: second (parse_token_list (tokens)),
-                        grind (e),
-                        print (e),
-                        e: display_expression_from (tokens)));
+display_output_xml ("output-examples.xml");
