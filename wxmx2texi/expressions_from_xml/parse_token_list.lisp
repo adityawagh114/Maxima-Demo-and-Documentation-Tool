@@ -35,3 +35,8 @@
         ((|$;| |$$|)
          (return (list (mheader (pop-c)) nil input)))
         (t (parse-bug-err '$parse_token_list))))))
+
+(defmfun $display_expression_from (l)
+  (let ((e (third ($parse_token_list l))))
+    (displa e)
+    e))
