@@ -88,4 +88,4 @@ split_mth (e%) :=
   block ([aa: args (e%), ii],
          ii: sublist_indices (aa, lambda ([e1], not atom(e1) and op(e1) = lbl())),
          ii: append (ii, [length (aa) + 1]),
-         makelist (makelist (aa[i], i, ii[j] + 1, ii[j + 1] - 1), j, 1, length (ii) - 1));
+         makelist (aa[ii[j]] = makelist (aa[i], i, ii[j] + 1, ii[j + 1] - 1), j, 1, length (ii) - 1));
