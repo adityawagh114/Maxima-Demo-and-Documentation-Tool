@@ -1,0 +1,91 @@
+/* expressions_from_xml.mac -- process Maxima expressions constructed from wxmx output XML
+ *
+ * Note that these pattern matching rules work only for
+ * expressions created from wxMaxima wxmx <output> XML tags.
+ * The goal is to construct a list of tokens which can then
+ * be reassembled into the Maxima expression represented by
+ * the wxmx output XML.
+ *
+ * copyright 2021 by Robert Dodier
+ * I release this work under terms of the GNU General Public License
+ */
+
+load ("expressions_from_xml.lisp");
+
+matchdeclare ([aa, bb, cc, dd], all);
+
+defrule (rule_for_numbers, n()(aa), parse_string(aa));
+defrule (rule_for_variables, v()(aa), ?makealias(aa));
+defrule (rule_for_greek_variables, g()(aa), ?makealias(aa));
+defrule (rule_for_symbols, s()(aa), ?makealias(aa));
+defrule (rule_for_hidden_ops, h()(aa), ?makealias(aa));
+defrule (rule_for_function_names, fnm()(aa), ?makealias(aa));
+defrule (rule_for_functions, fn()(aa, bb), [aa, bb]);
+
+paren_left: ?makealias("(");
+paren_right: ?makealias (")");
+
+square_bracket_left: ?makealias ("[");
+square_bracket_right: ?makealias ("]");
+
+defrule (rule_for_subscripts, i()(aa, bb),
+         [aa, square_bracket_left, bb, square_bracket_right]);
+
+caret: ?makealias("^");
+
+defrule (rule_for_subsuperscripts, ie()(aa, bb, cc),
+         [paren_left, aa, square_bracket_left, bb, square_bracket_right, caret, cc, paren_right]);
+
+forward_slash: ?makealias("/");
+defrule (rule_for_fractions, f()(aa, bb), [paren_left, aa, paren_right, forward_slash, paren_left, bb, paren_right]);
+
+defrule (rule_for_exponents, e()(aa, bb), [paren_left, aa, paren_right, caret, paren_left, bb, paren_right]);
+
+defrule (rule_for_text, t()(aa), ?makealias(aa));
+
+matchdeclare (rr, lambda ([e], not atom(e) and op(e) = r()));
+defrule (rule_for_rows, rr, args(rr)); /* TREAT <R> AS INVISIBLE PARENTHESES, THEREFORE INSERT $( $) HERE ?? */
+
+matchdeclare (pp, lambda ([e], not atom(e) and op(e) = p()));
+defrule (rule_for_parentheses, pp, [paren_left, args(pp), paren_right]);
+
+apostrophe: ?makealias ("'");
+comma: ?makealias (",");
+
+defrule (rule_for_sums, sm("sum")(bb, cc, dd), process_sum_or_product ("sum", bb, cc, dd));
+defrule (rule_for_lsums, sm("lsum")(bb, cc, dd), process_lsum (bb, cc, dd));
+defrule (rule_for_products, sm("prod")(bb, cc, dd), process_sum_or_product ("product", bb, cc, dd));
+
+process_sum_or_product (aa, bb, cc, dd) :=
+ [apostrophe, ?makealias(aa), paren_left, dd, comma, first(bb), comma, third(bb), comma, cc, paren_right];
+
+process_lsum (bb, cc, dd) :=
+ block ([var: first (bb),
+         list_values: rest (args (bb), 2)],
+        append ([apostrophe, 'lsum, paren_left, dd, comma, var, comma], list_values, [paren_right]));
+
+tokens_from (e%) :=
+ (apply1 (e%, rule_for_subscripts,
+              rule_for_subsuperscripts,
+              rule_for_sums,
+              rule_for_lsums,
+              rule_for_products,
+              rule_for_numbers,
+              rule_for_variables,
+              rule_for_greek_variables,
+              rule_for_symbols,
+              rule_for_hidden_ops,
+              rule_for_function_names,
+              rule_for_functions,
+              rule_for_fractions,
+              rule_for_exponents,
+              rule_for_text,
+              rule_for_rows,
+              rule_for_parentheses),
+  flatten (%%));
+
+split_mth (e%) :=
+  block ([aa: args (e%), ii],
+         ii: sublist_indices (aa, lambda ([e1], not atom(e1) and op(e1) = lbl())),
+         ii: append (ii, [length (aa) + 1]),
+         makelist (aa[ii[j]] = makelist (aa[i], i, ii[j] + 1, ii[j + 1] - 1), j, 1, length (ii) - 1));
