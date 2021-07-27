@@ -2,7 +2,7 @@
 (declaim (sb-ext:muffle-conditions cl:warning))
 (in-package :maxima)
 ;;plump xml parser has been used https://shinmera.github.io/plump/ 
-(ql:quickload :plump)
+
 (ql:quickload :zip)
 
 
@@ -96,7 +96,11 @@
 
    (inputs 
     :accessor cell-inputs
-    :initform (map-into (make-array 0 :fill-pointer 0 :adjustable t) (lambda () (make-instance 'input)))))) 
+    :initform (map-into (make-array 0 :fill-pointer 0 :adjustable t) (lambda () (make-instance 'input))))
+
+    (output_string :accessor cell-output_string)
+      
+    )) 
 
 
 
@@ -114,6 +118,9 @@
                                                                                                            ;;
                                                                                                            ;;
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
 
 ;;function to parse the xml (pass the file location as argument. Example  (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
 (defun $xmlparser (file_location olocation folder_location)
@@ -214,7 +221,28 @@
 
     ;; the first_child will contain the first child of the cell and it will be used to know whether the cell has editor or input as first child
     (setf first_child (aref child 0) ) 
+    ;; (print (length child))
+
+    (if (= 3 (length child))
+    (progn
+
+         (setf output_node (aref child 2) )
+
+          (defparameter output_str (plump:serialize output_node nil ) )      
+            ( setf (cell-output_string cell_object) output_str) 
+
+            ;;  (print (cell-output_string cell_object)) 
+              
+    )
+    (
+     setf (cell-output_string cell_object) "NotDefined") 
+
+
     
+    )
+    
+    
+ 
 
 
     
@@ -383,7 +411,13 @@
 
 
 
+(defun modify_output(str)
 
+   (setf str   (concatenate 'string  "<outputs>" str))
+   (setf str   (concatenate 'string   str "</outputs>"))
+str
+
+)
 
 
 
@@ -441,6 +475,7 @@
   (setq endindex (length cell_array) )
 
 
+
 ;; (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
 ;;   (format texinfo_string "
 ;;      @end example "))
@@ -452,6 +487,25 @@
   (dotimes (i (length cell_array))
 
     (setf cellobject (aref cell_array i ))
+
+
+
+
+
+
+   (if (string/=	(cell-output_string cellobject) "NotDefined" )   
+ (setf final_output (modify_output (cell-output_string cellobject) )))
+;; (setf final_output (cell-output_string cellobject ))
+
+
+;; (print (cell-output_string cellobject ))
+
+;; (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+;;   (format texinfo_string "this is final output --> ~a" final_output))
+
+
+
+
     
    (if (= startindex 1) 
  (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
@@ -841,9 +895,28 @@
        )
     
         (if (= type_number 7)
+        (progn
+
+
+                    (if (string/=	(cell-output_string cellobject) "NotDefined" )
+                      (progn
+          (defparameter maxima_string (mfuncall '$display_output_xml1 final_output))
+          (defparameter tex_string (mfuncall '$display_output_xml2 final_output))
+
+
+         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
+                             (format texinfo_string "~%~%  ~a" maxima_string)  ) 
+         
+
+
+         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
+                             (format texinfo_string "~%@ifinfo~%~a~%@end ifinfo" tex_string)) ))
+                             
+
+
 
                     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@end example ~% ")) )
+                             (format texinfo_string "~%@end example ~% ")) ))
 
            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
   (format texinfo_string "  ~% ~% ~% ~%"   ))  

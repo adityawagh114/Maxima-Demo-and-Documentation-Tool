@@ -3,6 +3,7 @@
 
 
 /*loading all the required libraries */
+load("display_output_xml.mac")$
 load("wxmx2texi.lisp");
 load("alt-display.mac")$
 load("tex-display.lisp");

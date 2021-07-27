@@ -1,0 +1,5 @@
+<foo>
+  <bar "baz"="quux" "buz"=5678>1234</bar>
+  <mumble>blurf</mumble>
+  <snort>"hello"</snort>
+</foo>
