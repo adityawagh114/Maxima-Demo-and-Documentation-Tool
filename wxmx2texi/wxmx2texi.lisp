@@ -905,7 +905,14 @@ str
 
 
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%~%  ~a" maxima_string)  ) 
+                             (format texinfo_string "~%Maxima expression:-~%  ~a" maxima_string)  ) 
+         
+
+         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
+                             (format texinfo_string "~%Simplified 2D:- ~%  " )  )
+
+                        (mfuncall '$display_output_xml3 final_output texi_location )     
+
          
 
 
