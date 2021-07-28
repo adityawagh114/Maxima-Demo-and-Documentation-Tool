@@ -69,10 +69,10 @@
  
  
  
-@node Cell8, ,Cell7,Top
+@node Cell8,Cell9,Cell7,Top
 
-
-       @c  sum(1/x^2, x, 1, inf); 
+    
+@c  sum(1/x^2, x, 1, inf); 
 
 @c Maxima expression:-
   @c 'sum(1/x^2,x,1,inf)
@@ -92,7 +92,53 @@ x = 1
 @end ifinfo
 @iftex
 @tex
-\sum_{x=1}^{\infty }{{{1}\over{x^2}}}
+$$\sum_{x=1}^{\infty }{{{1}\over{x^2}}}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell9,Cell10,Cell8,Top
+
+    
+@c 4^4+9; 
+
+@c Maxima expression:-
+  @c 265
+@c Simplified 2D:- 
+  
+@ifinfo
+@example 
+265 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$265$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell10, ,Cell9,Top
+
+
+       @c solve(x^2+5*x+6=0); 
+
+@c Maxima expression:-
+  @c [x = -3,x = -2]
+@c Simplified 2D:- 
+  
+@ifinfo
+@example 
+[x = - 3, x = - 2] 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\left[ x=-3 , x=-2 \right] $$
 @end tex
 @end iftex  
  

@@ -63,7 +63,7 @@ File: sample.info,  Node: Cell7,  Next: Cell8,  Prev: Cell6,  Up: Top
 This is a text cell.  It spans over two lines.
 
 
-File: sample.info,  Node: Cell8,  Prev: Cell7,  Up: Top
+File: sample.info,  Node: Cell8,  Next: Cell9,  Prev: Cell7,  Up: Top
 
      inf
      ====
@@ -72,6 +72,18 @@ File: sample.info,  Node: Cell8,  Prev: Cell7,  Up: Top
      /      2
      ====  x
      x = 1
+
+
+
+File: sample.info,  Node: Cell9,  Next: Cell10,  Prev: Cell8,  Up: Top
+
+     265
+
+
+
+File: sample.info,  Node: Cell10,  Prev: Cell9,  Up: Top
+
+     [x = - 3, x = - 2]
 
 
 
@@ -86,6 +98,8 @@ Node: Cell5740
 Node: Cell6890
 Node: Cell7996
 Node: Cell81117
+Node: Cell91276
+Node: Cell101361
 
 End Tag Table
 

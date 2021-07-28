@@ -3,7 +3,7 @@
 <!--   Created using wxMaxima 19.07.0   -->
 <!--https://wxMaxima-developers.github.io/wxmaxima/-->
 
-<wxMaximaDocument version="1.5" zoom="80" activecell="7">
+<wxMaximaDocument version="1.5" zoom="80" activecell="10">
 
 <cell type="section" sectioning_level="2">
 <editor type="section" sectioning_level="2">
@@ -63,6 +63,28 @@
 </input>
 <output>
 <mth><lbl>(%o2) </lbl><sm type="sum"><r><v>x</v><v>=</v><n>1</n></r><r><s>inf</s></r><r><f><r><n>1</n></r><r><e><r><v>x</v></r><r><n>2</n></r></e></r></f></r></sm>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>4^4+9;</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o1) </lbl><n>265</n>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>solve(x^2+5*x+6=0);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o8) </lbl><t>[</t><v>x</v><v>=</v><v>−</v><n>3</n><t>,</t><v>x</v><v>=</v><v>−</v><n>2</n><t>]</t>
 </mth></output>
 </cell>
 
