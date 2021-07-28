@@ -1,4 +1,4 @@
-#+sbcl (declaim (sb-ext:muffle-conditions cl:warning))
+(declaim (sb-ext:muffle-conditions cl:warning))
 (in-package :maxima)
 ;;plump xml parser has been used https://shinmera.github.io/plump/ 
 
@@ -12,13 +12,42 @@
   )
 
 
+(defun $get_temp(str)
+   
+      (defparameter file_location  (uiop:tmpize-pathname (pathname  str)) )
+
+      (defparameter foldername (pathname-name (pathname file_location ) ))
+      ;; (print foldername)
+
+      (delete-file (pathname file_location) )
+
+      (defparameter folder_location ( concatenate 'string str foldername "/"))
+
+      ;; (print folder_location)
+      (ensure-directories-exist (pathname folder_location))
+
+         foldername
+  )
+
+(defun $change_output_location(output_folder temp_folder_name folder_name)
+
+      (defparameter output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))
+    
+       
+output_folder
+ )
+
+
+
 
 
 ;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
-(defun $unzipfile(src)
+(defun $unzipfile(src output_folder temp_folder_name folder_name)
    
    (setf newsrc (subseq src 0 (- (length src  ) 5 )))
-   (setf dest (concatenate 'string newsrc "/"))
+  ;;  (setf dest (concatenate 'string newsrc "/"))
+   (setf dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" ))
+
    (setf newsrc   (concatenate 'string newsrc ".zip" ))
 
    (rename-file (pathname src) (pathname newsrc) )
@@ -941,7 +970,7 @@ str
                              (format texinfo_string "~%@end example ~%@end ifinfo")) 
                              
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@iftex~%@tex~%~a~%@end tex~%@end iftex" tex_string))
+                             (format texinfo_string "~%@iftex~%@tex~%$$~a$$~%@end tex~%@end iftex" tex_string))
                              
                              
                              ))

@@ -27,10 +27,14 @@ strmathml:"";
 print("Provide the Location of the wxmx and texi file inside the function wxmx2texi(<location>,<location>) " );
 
 
-  wxmx2texi(locat,output_location):= (
-    /* return location of xml file from .wxmx file */
+  wxmx2texi(locat,output_folder):= (
      folder_name:get_folder_name(locat),
-      locat:(unzipfile(locat)),
+     /*will create and return name of temp folder*/
+      temp_folder_name:get_temp(output_folder),
+      /*location of .texi file*/
+      output_location:change_output_location(output_folder,temp_folder_name,folder_name),
+      /*return location of content.xml*/
+      locat:(unzipfile(locat,output_folder,temp_folder_name,folder_name)),
     
     xmlparser(locat,output_location,folder_name));
 
