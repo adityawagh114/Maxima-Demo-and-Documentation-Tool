@@ -24,7 +24,7 @@ strlatex:"";
 strtexinfo:"";
 strmathml:"";
 
-print("Provide the Location of the wxmx and texi file inside the function wxmx2texi(<location>,<location>) " );
+print("Provide the Location of the wxmx and texi folder inside the function wxmx2texi(<location>,<location>) " );
 
 
   wxmx2texi(locat,output_folder):= (
