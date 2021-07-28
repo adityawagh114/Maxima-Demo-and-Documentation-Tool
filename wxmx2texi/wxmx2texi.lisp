@@ -31,10 +31,10 @@
 
 (defun $change_output_location(output_folder temp_folder_name folder_name)
 
-      (defparameter output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))
+      (defparameter new_output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))
     
        
-output_folder
+new_output_folder
  )
 
 
