@@ -1,4 +1,3 @@
-
 (declaim (sb-ext:muffle-conditions cl:warning))
 (in-package :maxima)
 ;;plump xml parser has been used https://shinmera.github.io/plump/ 
@@ -917,11 +916,17 @@ str
 
          
                     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@end example ~%@end ifinfo")) ))
-
-
+                             (format texinfo_string "~%@end example ~%@end ifinfo")) 
+                             
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@iftex~%@tex~%~a~%@end tex~%@end iftex" tex_string)) ))
+                             (format texinfo_string "~%@iftex~%@tex~%~a~%@end tex~%@end iftex" tex_string))
+                             
+                             
+                             ))
+
+
+                             
+                              ))
                              
 
 
@@ -944,5 +949,3 @@ str
   (format texinfo_string "@bye~% "))
 
   )
-
-
