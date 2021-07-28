@@ -36,6 +36,10 @@ print("Provide the Location of the wxmx and texi file inside the function wxmx2t
       /*return location of content.xml*/
       locat:(unzipfile(locat,output_folder,temp_folder_name,folder_name)),
     
-    xmlparser(locat,output_location,folder_name));
+    xmlparser(locat,output_location,folder_name),
+    print("The texi file is saved in :",output_location)
+    
+    
+    );
 
 
