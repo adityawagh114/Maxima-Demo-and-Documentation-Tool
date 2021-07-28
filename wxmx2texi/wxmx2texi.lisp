@@ -652,8 +652,7 @@ str
                         (
                         progn
                         (setq type_number 7)
-                          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@example ~%"))
+                        
 
                       )
                 
@@ -773,7 +772,7 @@ str
                          
  
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "  ~a ~%" strline))  
+                       (format texinfo_string  "@c ~a ~%" strline))  
                       
                       
                     )
@@ -872,7 +871,7 @@ str
                          
  
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "  ~a ~%" strline))  
+                       (format texinfo_string  "@c ~a ~%" strline))  
                       
                       
                     )
@@ -905,25 +904,28 @@ str
 
 
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%Maxima expression:-~%  ~a" maxima_string)  ) 
+                             (format texinfo_string "~%@c Maxima expression:-~%  @c ~a" maxima_string)  ) 
          
 
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%Simplified 2D:- ~%  " )  )
+                             (format texinfo_string "~%@c Simplified 2D:- ~%  " )  )
+
+                               (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                             (format texinfo_string "~%@ifinfo~%@example ~%"))
 
                         (mfuncall '$display_output_xml3 final_output texi_location )     
 
          
+                    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
+                             (format texinfo_string "~%@end example ~%@end ifinfo")) ))
 
 
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@ifinfo~%~a~%@end ifinfo" tex_string)) ))
+                             (format texinfo_string "~%@iftex~%@tex~%~a~%@end tex~%@end iftex" tex_string)) ))
                              
 
 
 
-                    (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@end example ~% ")) ))
 
            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
   (format texinfo_string "  ~% ~% ~% ~%"   ))  
