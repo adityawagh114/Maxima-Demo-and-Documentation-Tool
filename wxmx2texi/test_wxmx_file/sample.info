@@ -1,0 +1,95 @@
+This is sample.info, produced by makeinfo version 6.7 from sample.texi.
+
+
+File: sample.info,  Node: Top,  Next: Cell1,  Prev: (dir),  Up: (dir)
+
+* Menu:
+
+* Cell1::
+
+
+File: sample.info,  Node: Cell1,  Next: Cell2,  Prev: Top,  Up: Top
+
+1 All cell types
+****************
+
+* Menu:
+
+* Cell2::
+* Cell6::
+
+
+File: sample.info,  Node: Cell2,  Next: Cell3,  Prev: Cell1,  Up: Top
+
+1.1 Subsection cells
+====================
+
+* Menu:
+
+* Cell3::
+
+
+File: sample.info,  Node: Cell3,  Next: Cell4,  Prev: Cell2,  Up: Top
+
+1.1.1 Sub-sub-section cells
+---------------------------
+
+* Menu:
+
+* Cell4::
+* Cell5::
+
+
+File: sample.info,  Node: Cell4,  Next: Cell5,  Prev: Cell3,  Up: Top
+
+1.1.1.1 Sub-sub-sub-section cells
+.................................
+
+
+File: sample.info,  Node: Cell5,  Next: Cell6,  Prev: Cell4,  Up: Top
+
+1.1.1.2 Sub-sub-sub-sub-section cells
+.....................................
+
+
+File: sample.info,  Node: Cell6,  Next: Cell7,  Prev: Cell5,  Up: Top
+
+1.2 A text cell
+===============
+
+
+File: sample.info,  Node: Cell7,  Next: Cell8,  Prev: Cell6,  Up: Top
+
+This is a text cell.  It spans over two lines.
+
+
+File: sample.info,  Node: Cell8,  Prev: Cell7,  Up: Top
+
+     inf
+     ====
+     \     1
+      >    --
+     /      2
+     ====  x
+     x = 1
+
+
+
+
+Tag Table:
+Node: Top73
+Node: Cell1166
+Node: Cell2302
+Node: Cell3438
+Node: Cell4598
+Node: Cell5740
+Node: Cell6890
+Node: Cell7996
+Node: Cell81117
+
+End Tag Table
+
+
+Local Variables:
+coding: utf-8
+End:

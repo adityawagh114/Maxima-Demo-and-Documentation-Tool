@@ -1,0 +1,102 @@
+ \input texinfo 
+
+@node Top, Cell1,(dir),(dir)
+@top
+
+ 
+ 
+ 
+ 
+  @node Cell1,Cell2,Top,Top
+
+
+@chapter  All cell types 
+  
+ 
+ 
+ 
+@node Cell2,Cell3,Cell1,Top
+
+    
+
+@section  Subsection cells 
+  
+ 
+ 
+ 
+@node Cell3,Cell4,Cell2,Top
+
+    
+
+@subsection  Sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell4,Cell5,Cell3,Top
+
+    
+
+@subsubsection  Sub-sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell5,Cell6,Cell4,Top
+
+    
+
+@subsubsection  Sub-sub-sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell6,Cell7,Cell5,Top
+
+    
+
+@section  A text cell 
+  
+ 
+ 
+ 
+@node Cell7,Cell8,Cell6,Top
+
+    
+ This is a text cell. 
+ It spans over two lines. 
+  
+ 
+ 
+ 
+@node Cell8, ,Cell7,Top
+
+
+       @c  sum(1/x^2, x, 1, inf); 
+
+@c Maxima expression:-
+  @c 'sum(1/x^2,x,1,inf)
+@c Simplified 2D:- 
+  
+@ifinfo
+@example 
+inf
+====
+\     1
+ >    -- 
+/      2
+====  x
+x = 1
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+\sum_{x=1}^{\infty }{{{1}\over{x^2}}}
+@end tex
+@end iftex  
+ 
+ 
+ 
+@bye
+ 

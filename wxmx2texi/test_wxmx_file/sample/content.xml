@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--   Created using wxMaxima 19.07.0   -->
+<!--https://wxMaxima-developers.github.io/wxmaxima/-->
+
+<wxMaximaDocument version="1.5" zoom="80" activecell="7">
+
+<cell type="section" sectioning_level="2">
+<editor type="section" sectioning_level="2">
+<line>All cell types</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>Subsection cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="4">
+<editor type="subsection" sectioning_level="4">
+<line>Sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="5">
+<editor type="subsection" sectioning_level="5">
+<line>Sub-sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="6">
+<editor type="subsection" sectioning_level="6">
+<line>Sub-sub-sub-sub-section cells</line>
+</editor>
+
+</cell>
+
+<cell type="subsection" sectioning_level="3">
+<editor type="subsection" sectioning_level="3">
+<line>A text cell</line>
+</editor>
+
+</cell>
+
+<cell type="text">
+<editor type="text">
+<line>This is a text cell.</line>
+<line>It spans over two lines.</line>
+</editor>
+
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line> sum(1/x^2, x, 1, inf);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o2) </lbl><sm type="sum"><r><v>x</v><v>=</v><n>1</n></r><r><s>inf</s></r><r><f><r><n>1</n></r><r><e><r><v>x</v></r><r><n>2</n></r></e></r></f></r></sm>
+</mth></output>
+</cell>
+
+</wxMaximaDocument>
