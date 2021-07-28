@@ -5,7 +5,7 @@
 
 ;; Helper for MREAD-SYNERR.
 ;; Adapted from local function PRINTER in built-in MREAD-SYNERR.
-(declaim (sb-ext:muffle-conditions cl:warning))
+#+sbcl (declaim (sb-ext:muffle-conditions cl:warning))
 
 
 (defun mread-synerr-printer (x)

@@ -1,6 +1,6 @@
 ;;This a a modified version of the pacakge mathml.lisp
 
-(declaim (sb-ext:muffle-conditions cl:warning))
+#+sbcl (declaim (sb-ext:muffle-conditions cl:warning))
 
 
 (in-package :maxima)
