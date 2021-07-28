@@ -769,9 +769,20 @@ str
                     (
                       progn
                          
- 
+                            (if (= 7 type_number )
+                            (progn
+
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "@c ~a ~%" strline))  
+                       (format texinfo_string  "@c ~a ~%" strline))                             
+                            
+                            
+                            )
+                            (progn
+                            
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  " ~a ~%" strline))  
+                            )
+                            )
                       
                       
                     )
@@ -868,11 +879,22 @@ str
                     (
                       progn
                          
- 
+
+                      
+                       (if (= 7 type_number )
+                            (progn
+
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "@c ~a ~%" strline))  
-                      
-                      
+                       (format texinfo_string  "@c ~a ~%" strline))                             
+                            
+                            
+                            )
+                            (progn
+                            
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  " ~a ~%" strline))  
+                            )
+                            ) 
                     )
                 
                 
