@@ -65,6 +65,11 @@ This is a text cell.  It spans over two lines.
 
 File: sample.info,  Node: Cell8,  Next: Cell9,  Prev: Cell7,  Up: Top
 
+Input:
+              sum(1/x^2, x, 1, inf);
+
+
+   Output:
      inf
      ====
      \     1
@@ -77,12 +82,22 @@ File: sample.info,  Node: Cell8,  Next: Cell9,  Prev: Cell7,  Up: Top
 
 File: sample.info,  Node: Cell9,  Next: Cell10,  Prev: Cell8,  Up: Top
 
+Input:
+             4^4+9;
+
+
+   Output:
      265
 
 
 
 File: sample.info,  Node: Cell10,  Prev: Cell9,  Up: Top
 
+Input:
+             solve(x^2+5*x+6=0);
+
+
+   Output:
      [x = - 3, x = - 2]
 
 
@@ -98,8 +113,8 @@ Node: Cell5740
 Node: Cell6890
 Node: Cell7996
 Node: Cell81117
-Node: Cell91276
-Node: Cell101361
+Node: Cell91333
+Node: Cell101458
 
 End Tag Table
 

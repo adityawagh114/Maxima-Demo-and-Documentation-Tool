@@ -72,12 +72,18 @@
 @node Cell8,Cell9,Cell7,Top
 
     
-@c  sum(1/x^2, x, 1, inf); 
+
+Input:
+@example
+         sum(1/x^2, x, 1, inf); 
+
+@end example 
 
 @c Maxima expression:-
   @c 'sum(1/x^2,x,1,inf)
 @c Simplified 2D:- 
-  
+
+Output:
 @ifinfo
 @example 
 inf
@@ -101,12 +107,18 @@ $$\sum_{x=1}^{\infty }{{{1}\over{x^2}}}$$
 @node Cell9,Cell10,Cell8,Top
 
     
-@c 4^4+9; 
+
+Input:
+@example
+        4^4+9; 
+
+@end example 
 
 @c Maxima expression:-
   @c 265
 @c Simplified 2D:- 
-  
+
+Output:
 @ifinfo
 @example 
 265 
@@ -124,12 +136,18 @@ $$265$$
 @node Cell10, ,Cell9,Top
 
 
-       @c solve(x^2+5*x+6=0); 
+       
+Input:
+@example
+        solve(x^2+5*x+6=0); 
+
+@end example 
 
 @c Maxima expression:-
   @c [x = -3,x = -2]
 @c Simplified 2D:- 
-  
+
+Output:
 @ifinfo
 @example 
 [x = - 3, x = - 2] 
