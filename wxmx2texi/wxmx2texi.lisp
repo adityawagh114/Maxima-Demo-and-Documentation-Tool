@@ -12,13 +12,20 @@
   )
 
 
+
+(defun $convert_path(src)
+
+     (namestring (probe-file src))
+  )
+
+
 (defun $get_temp(str)
    
       (defparameter file_location  (uiop:tmpize-pathname (pathname  str)) )
 
       (defparameter foldername (pathname-name (pathname file_location ) ))
       ;; (print foldername)
-
+           ;; a radome name file also gets created by the function which is not required
       (delete-file (pathname file_location) )
 
       (defparameter folder_location ( concatenate 'string str foldername "/"))
@@ -44,20 +51,20 @@ new_output_folder
 ;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
 (defun $unzipfile(src output_folder temp_folder_name folder_name)
    
-   (setf newsrc (subseq src 0 (- (length src  ) 5 )))
+  ;;  (setf newsrc (subseq src 0 (- (length src  ) 5 )))
   ;;  (setf dest (concatenate 'string newsrc "/"))
    (setf dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" ))
 
-   (setf newsrc   (concatenate 'string newsrc ".zip" ))
+  ;;  (setf newsrc   (concatenate 'string newsrc ".zip" ))
 
-   (rename-file (pathname src) (pathname newsrc) )
+  ;;  (rename-file (pathname src) (pathname newsrc) )
    (ensure-directories-exist (pathname dest) )
 
-   (zip:unzip (pathname newsrc) (pathname dest) ) 
+   (zip:unzip (pathname src) (pathname dest) ) 
 
-   (setf rename_newsrc (subseq newsrc 0 (- (length newsrc  ) 4 )))
-   (setf rename_newsrc   (concatenate 'string rename_newsrc ".wxmx" ))
-   (rename-file (pathname newsrc) (pathname rename_newsrc) )
+  ;;  (setf rename_newsrc (subseq newsrc 0 (- (length newsrc  ) 4 )))
+  ;;  (setf rename_newsrc   (concatenate 'string rename_newsrc ".wxmx" ))
+  ;;  (rename-file (pathname newsrc) (pathname rename_newsrc) )
 
    (setf dest (concatenate 'string dest "content.xml")))
 
