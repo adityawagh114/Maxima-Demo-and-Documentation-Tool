@@ -809,8 +809,8 @@ str
                             (progn
 
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "@c ~a ~%" strline))                             
-                            
+                       (format texinfo_string  "~%Input:~%@example~%        ~a ~%~%@end example ~%" strline))                             
+                         
                             
                             )
                             (progn
@@ -921,7 +921,7 @@ str
                             (progn
 
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "@c ~a ~%" strline))                             
+                       (format texinfo_string  "~%Input:~%@example~%        ~a ~%~%@end example ~%" strline))                             
                             
                             
                             )
@@ -965,10 +965,10 @@ str
          
 
          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                             (format texinfo_string "~%@c Simplified 2D:- ~%  " )  )
+                             (format texinfo_string "~%@c Simplified 2D:- ~%" )  )
 
                                (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@ifinfo~%@example ~%"))
+                             (format texinfo_string "~%Output:~%@ifinfo~%@example ~%"))
 
                         (mfuncall '$display_output_xml3 final_output texi_location )     
 
