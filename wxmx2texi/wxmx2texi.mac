@@ -5,18 +5,7 @@
 /*loading all the required libraries */
 load("display_output_xml.mac")$
 load("wxmx2texi.lisp");
-load("alt-display.mac")$
-load("tex-display.lisp");
 load("stringproc"); 
-load("alt-display.lisp");
-load("mactex.lisp");
-
-/*The original mathml function was returning the whole mathml every time, I have modified it so it return only one string at a time  */
-load("wmathml.lisp");
-
-/*To check if a string is valid or not without showing the error message the original file was modifiled   */
-load("wcatchable_syntax_error.lisp");
-
 
 
 /* strings for storing the texinfo properties */
