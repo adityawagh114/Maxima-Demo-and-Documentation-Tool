@@ -4,25 +4,20 @@ load("display_output_xml.mac")$
 load("wxmx2texi.lisp");
 load("stringproc"); 
 
-/* strings for storing the texinfo properties */
-strlatex:"";
-strtexinfo:"";
-strmathml:"";
 print("Provide the Location of the wxmx and texi folder inside the function wxmx2texi(<location>,<location>) " );
 
   wxmx2texi(locat,output_folder):= (
         locat:convert_path(locat),
-       output_folder:convert_path(output_folder),
-            print(locat,output_folder),
-     folder_name:get_folder_name(locat),
-     /*will create and return name of temp folder*/
-      temp_folder_name:get_temp(output_folder),
-      /*location of .texi file*/
-      output_location:change_output_location(output_folder,temp_folder_name,folder_name),
-      /*return location of content.xml*/
-      locat:(unzipfile(locat,output_folder,temp_folder_name,folder_name)),
-    xmlparser(locat,output_location,folder_name),
-    print("The texi file is saved in :",output_location)
-    );
+        output_folder:convert_path(output_folder),
+        print(locat,output_folder),
+        folder_name:get_folder_name(locat),
+           /*will create and return name of temp folder*/
+        temp_folder_name:get_temp(output_folder),
+           /*location of .texi file*/
+        output_location:change_output_location(output_folder,temp_folder_name,folder_name),
+          /*return location of content.xml*/
+        locat:(unzipfile(locat,output_folder,temp_folder_name,folder_name)),
+        xmlparser(locat,output_location,folder_name),
+        print("The texi file is saved in :",output_location));
 
 

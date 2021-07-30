@@ -15,25 +15,20 @@ display_output_xml (f%,[location]) :=
                                  e: second (parse_token_list (tokens)),
                                  hh: display_expression_from (tokens),
                                  file_output_append:true,
-                                (if emptyp(location) then location:"" else with_stdout(location[1],print(hh))),
+                                 (if emptyp(location) then location:"" else with_stdout(location[1],print(hh))),
                                  str1:string (e),
                                  str2:tex1(e),
-                                 str3:e
-                                 )),
+                                 str3:e)),
                                   arr:[str1,str2,str3],
-                                  arr
-                                 );
+                                  arr);
 
 display_output_xml1(f%):=(
 arr:display_output_xml(f%), 
-arr[1]
-);
+arr[1]);
 
 display_output_xml2(f%):=(
 arr:display_output_xml(f%), 
-arr[2]
-);
+arr[2]);
 
 display_output_xml3(f%,location):=(
-display_output_xml(f%,location) 
-);
+display_output_xml(f%,location));
