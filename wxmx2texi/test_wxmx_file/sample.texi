@@ -75,8 +75,7 @@
 
 Input:
 @example
-         sum(1/x^2, x, 1, inf); 
-
+         sum(1/x^2, x, 1, inf);
 @end example 
 
 @c Maxima expression:-
@@ -110,8 +109,7 @@ $$\sum_{x=1}^{\infty }{{{1}\over{x^2}}}$$
 
 Input:
 @example
-        4^4+9; 
-
+        4^4+9;
 @end example 
 
 @c Maxima expression:-
@@ -133,14 +131,13 @@ $$265$$
  
  
  
-@node Cell10, ,Cell9,Top
+@node Cell10,Cell11,Cell9,Top
 
+    
 
-       
 Input:
 @example
-        solve(x^2+5*x+6=0); 
-
+        solve(x^2+5*x+6=0);
 @end example 
 
 @c Maxima expression:-
@@ -157,6 +154,35 @@ Output:
 @iftex
 @tex
 $$\left[ x=-3 , x=-2 \right] $$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell11, ,Cell10,Top
+
+
+       
+Input:
+@example
+        x+
+        y;
+@end example 
+
+@c Maxima expression:-
+  @c y+x
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+y + x 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$y+x$$
 @end tex
 @end iftex  
  

@@ -68,7 +68,6 @@ File: sample.info,  Node: Cell8,  Next: Cell9,  Prev: Cell7,  Up: Top
 Input:
               sum(1/x^2, x, 1, inf);
 
-
    Output:
      inf
      ====
@@ -85,20 +84,29 @@ File: sample.info,  Node: Cell9,  Next: Cell10,  Prev: Cell8,  Up: Top
 Input:
              4^4+9;
 
-
    Output:
      265
 
 
 
-File: sample.info,  Node: Cell10,  Prev: Cell9,  Up: Top
+File: sample.info,  Node: Cell10,  Next: Cell11,  Prev: Cell9,  Up: Top
 
 Input:
              solve(x^2+5*x+6=0);
 
-
    Output:
      [x = - 3, x = - 2]
+
+
+
+File: sample.info,  Node: Cell11,  Prev: Cell10,  Up: Top
+
+Input:
+             x+
+             y;
+
+   Output:
+     y + x
 
 
 
@@ -113,8 +121,9 @@ Node: Cell5740
 Node: Cell6890
 Node: Cell7996
 Node: Cell81117
-Node: Cell91333
-Node: Cell101458
+Node: Cell91332
+Node: Cell101456
+Node: Cell111609
 
 End Tag Table
 

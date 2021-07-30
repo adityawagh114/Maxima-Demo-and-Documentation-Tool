@@ -3,7 +3,7 @@
 <!--   Created using wxMaxima 19.07.0   -->
 <!--https://wxMaxima-developers.github.io/wxmaxima/-->
 
-<wxMaximaDocument version="1.5" zoom="80" activecell="10">
+<wxMaximaDocument version="1.5" zoom="80" activecell="11">
 
 <cell type="section" sectioning_level="2">
 <editor type="section" sectioning_level="2">
@@ -85,6 +85,18 @@
 </input>
 <output>
 <mth><lbl>(%o8) </lbl><t>[</t><v>x</v><v>=</v><v>−</v><n>3</n><t>,</t><v>x</v><v>=</v><v>−</v><n>2</n><t>]</t>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>x+</line>
+<line>y;</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o1) </lbl><v>y</v><v>+</v><v>x</v>
 </mth></output>
 </cell>
 

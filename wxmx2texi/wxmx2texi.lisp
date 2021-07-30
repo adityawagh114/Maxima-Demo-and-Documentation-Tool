@@ -687,7 +687,9 @@ str
                         (
                         progn
                         (setq type_number 7)
-                        
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "~%Input:~%@example"))
+                                               
 
                       )
                 
@@ -809,7 +811,7 @@ str
                             (progn
 
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "~%Input:~%@example~%        ~a ~%~%@end example ~%" strline))                             
+                       (format texinfo_string  "~%        ~a" strline))                             
                          
                             
                             )
@@ -921,7 +923,7 @@ str
                             (progn
 
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                       (format texinfo_string  "~%Input:~%@example~%        ~a ~%~%@end example ~%" strline))                             
+                       (format texinfo_string  "~%        ~a" strline))                             
                             
                             
                             )
@@ -953,7 +955,10 @@ str
         (if (= type_number 7)
         (progn
 
-
+                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                       (format texinfo_string  "~%@end example ~%" strline))                             
+                         
+                                    
                     (if (string/=	(cell-output_string cellobject) "NotDefined" )
                       (progn
           (defparameter maxima_string (mfuncall '$display_output_xml1 final_output))
