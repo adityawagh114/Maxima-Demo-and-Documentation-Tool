@@ -23,11 +23,3 @@
 
   (defun $read_xml (f)
   (plump:first-child (plump:parse (string f))))
-  
-   ;;pass string of <output> in f 
-
-;; (defun $read_xml (f)
-          
-
-  ;; (plump:parse (string f))
-  ;; )

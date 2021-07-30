@@ -49,8 +49,5 @@
 
 (defmfun $display_expression_from (l)
   (let ((e (third ($parse_token_list l))))
-    ;; (displa e)
 
-    ;; (mfuncall '$with_stdout "/home/aditya/Videos/fd.texi"  ($print e) )
-  ;; ($print my-expression)
     e))

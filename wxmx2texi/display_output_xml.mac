@@ -66,8 +66,3 @@ display_output_xml(f%,location)
 
 );
 
-
-
-/*
-display_output_xml ("/home/aditya/Desktop/new pro/expressions_from_xml/output-examples.xml");
-*/
