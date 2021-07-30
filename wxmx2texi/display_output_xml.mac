@@ -2,7 +2,6 @@ load ("expressions_from_xml.mac");
 load ("parse_token_list.lisp");
 load ("wxmx2texi.lisp");
 
-
 display_output_xml (f%,[location]) :=
   block ([outputs: expressions_from_xml (read_xml (f%))],
         str1:"",str2:"",str3:"",
@@ -15,54 +14,26 @@ display_output_xml (f%,[location]) :=
                                  tokens: tokens_from (expr_bits),
                                  e: second (parse_token_list (tokens)),
                                  hh: display_expression_from (tokens),
-                                 
                                  file_output_append:true,
-                                 
-                                    
                                 (if emptyp(location) then location:"" else with_stdout(location[1],print(hh))),
-
-                                
-                          
-                                
                                  str1:string (e),
-                               
-                                   
-                              
                                  str2:tex1(e),
-                                
-
-                               
                                  str3:e
-                               
-                                 
                                  )),
-                                 
-                                   
                                   arr:[str1,str2,str3],
                                   arr
                                  );
 
-
 display_output_xml1(f%):=(
-
 arr:display_output_xml(f%), 
-
 arr[1]
 );
 
-
 display_output_xml2(f%):=(
-
 arr:display_output_xml(f%), 
-
 arr[2]
 );
 
-
 display_output_xml3(f%,location):=(
-
 display_output_xml(f%,location) 
-
-
 );
-
