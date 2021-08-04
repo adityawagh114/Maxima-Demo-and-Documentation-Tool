@@ -1,0 +1,377 @@
+ \input texinfo 
+
+@node Top, Cell1,(dir),(dir)
+@top
+
+ 
+ 
+ 
+ 
+  @node Cell1,Cell2,Top,Top
+
+
+Input:
+@example
+        'diff(u^2,u,1);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(u^2,"u",1)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+d    2
+-- (u ) 
+du
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d}\over{d\,\mbox{ u }}}\,u^2$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell2,Cell3,Cell1,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2,u,3);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(u^2,"u","3")
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+ 3
+d     2
+--- (u ) 
+  3
+du
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 3 }}}\over{d\,\mbox{ u }^{\mbox{ 3 }}}}\,u^2$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell3,Cell4,Cell2,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v,u,2,v,1);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(v+u^2,"u","2","v",1)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+ 2 + 1
+d            2
+------ (v + u ) 
+  2
+du  dv
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 2 }+1}}\over{d\,\mbox{ u }^{\mbox{ 2 }}\,d\,\mbox{ v }}}\,\left(v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell4,Cell5,Cell3,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v,u,1,v,1);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(v+u^2,"u",1,"v",1)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+  2
+ d          2
+----- (v + u ) 
+du dv
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^2}\over{d\,\mbox{ u }\,d\,\mbox{ v }}}\,\left(v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell5,Cell6,Cell4,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v+w^4,u,2,v,1,w,1);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(w^4+v+u^2,"u","2","v",1,"w",1)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+  2 + 2
+ d          4        2
+--------- (w  + v + u ) 
+  2
+du  dv dw
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 2 }+2}}\over{d\,\mbox{ u }^{\mbox{ 2 }}\,d\,\mbox{ v }\,d\,\mbox{ w }}}\,\left(w^4+v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell6,Cell7,Cell5,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v+w^4+x*7,u,2,v,1,w,1,x,4);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(7*x+w^4+v+u^2,"u","2","v",1,"w",1,"x","4")
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+  4 + 2 + 2
+ d                    4        2
+------------- (7 x + w  + v + u ) 
+  2         4
+du  dv dw dx
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 4 }+\mbox{ 2 }+2}}\over{d\,\mbox{ u }^{\mbox{ 2 }}\,d\,\mbox{ v }\,d\,\mbox{ w }\,d\,\mbox{ x }^{\mbox{ 4 }}}}\,\left(7\,x+w^4+v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell7,Cell8,Cell6,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v+w^4+x*7+y^3,u,2,v,1,w,1,x,4,y,1);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(y^3+7*x+w^4+v+u^2,"u","2","v",1,"w",1,"x","4","y",1)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+    4 + 2 + 3
+   d               3          4        2
+---------------- (y  + 7 x + w  + v + u ) 
+  2         4
+du  dv dw dx  dy
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 4 }+\mbox{ 2 }+3}}\over{d\,\mbox{ u }^{\mbox{ 2 }}\,d\,\mbox{ v }\,d\,\mbox{ w }\,d\,\mbox{ x }^{\mbox{ 4 }}\,d\,\mbox{ y }}}\,\left(y^3+7\,x+w^4+v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell8,Cell9,Cell7,Top
+
+                  
+
+Input:
+@example
+        'diff(u^2+v+w^4+x*7+y^3+w*3,u,2,v,1,w,1,x,4,y,1,z,6);
+@end example 
+
+@c Maxima expression:-
+  @c 'diff(y^3+7*x+w^4+3*w+v+u^2,"u","2","v",1,"w",1,"x","4","y",1,"z","6")
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+    6 + 4 + 2 + 3
+   d                   3          4              2
+-------------------- (y  + 7 x + w  + 3 w + v + u ) 
+  2         4      6
+du  dv dw dx  dy dz
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$${{d^{\mbox{ 6 }+\mbox{ 4 }+\mbox{ 2 }+3}}\over{d\,\mbox{ u }^{\mbox{ 2 }}\,d\,\mbox{ v }\,d\,\mbox{ w }\,d\,\mbox{ x }^{\mbox{ 4 }}\,d\,\mbox{ y }\,d\,\mbox{ z }^{\mbox{ 6 }}}}\,\left(y^3+7\,x+w^4+3\,w+v+u^2\right)$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell9,Cell10,Cell8,Top
+
+                  
+
+Input:
+@example
+        sqrt(x(1));
+        
+@end example 
+
+@c Maxima expression:-
+  @c sqrt(x(1))
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+sqrt(x(1)) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\sqrt{x\left(1\right)}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell10,Cell11,Cell9,Top
+
+                  
+
+Input:
+@example
+        sqrt(x(10));
+        
+@end example 
+
+@c Maxima expression:-
+  @c sqrt(x(10))
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+sqrt(x(10)) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\sqrt{x\left(10\right)}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell11,Cell12,Cell10,Top
+
+                  
+
+Input:
+@example
+        sqrt(x(100));
+@end example 
+
+@c Maxima expression:-
+  @c sqrt(x(100))
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+sqrt(x(100)) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\sqrt{x\left(100\right)}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell12, ,Cell11,Top
+
+
+      
+Input:
+@example
+        "HelloWorld";
+@end example 
+
+@c Maxima expression:-
+  @c "HelloWorld"
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+HelloWorld 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\mbox{ HelloWorld }$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@bye
+ 

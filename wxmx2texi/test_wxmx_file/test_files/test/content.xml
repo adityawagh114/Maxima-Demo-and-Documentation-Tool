@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--   Created using wxMaxima 19.07.0   -->
+<!--https://wxMaxima-developers.github.io/wxmaxima/-->
+
+<wxMaximaDocument version="1.5" zoom="100" activecell="12">
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2,u,1);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o28) </lbl><d><f diffstyle="yes"><r><s>d</s></r><r><s>d</s><h>*</h><v>u</v></r></f><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2,u,3);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o29) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>3</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>3</n></r></e></r></f><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v,u,2,v,1);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o30) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>3</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e><h>*</h><s>d</s><h>*</h><v>v</v></r></f><h>*</h><r><p><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v,u,1,v,1);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o31) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>2</n></r></e></r><r><s>d</s><h>*</h><v>u</v><h>*</h><s>d</s><h>*</h><v>v</v></r></f><h>*</h><r><p><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v+w^4,u,2,v,1,w,1);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o32) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>4</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e><h>*</h><s>d</s><h>*</h><v>v</v><h>*</h><s>d</s><h>*</h><v>w</v></r></f><h>*</h><r><p><e><r><v>w</v></r><r><n>4</n></r></e><v>+</v><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v+w^4+x*7,u,2,v,1,w,1,x,4);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o33) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>8</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e><h>*</h><s>d</s><h>*</h><v>v</v><h>*</h><s>d</s><h>*</h><v>w</v><h>*</h><s>d</s><h>*</h><e><r><v>x</v></r><r><n>4</n></r></e></r></f><h>*</h><r><p><n>7</n><h>*</h><v>x</v><v>+</v><e><r><v>w</v></r><r><n>4</n></r></e><v>+</v><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v+w^4+x*7+y^3,u,2,v,1,w,1,x,4,y,1);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o34) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>9</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e><h>*</h><s>d</s><h>*</h><v>v</v><h>*</h><s>d</s><h>*</h><v>w</v><h>*</h><s>d</s><h>*</h><e><r><v>x</v></r><r><n>4</n></r></e><h>*</h><s>d</s><h>*</h><v>y</v></r></f><h>*</h><r><p><e><r><v>y</v></r><r><n>3</n></r></e><v>+</v><n>7</n><h>*</h><v>x</v><v>+</v><e><r><v>w</v></r><r><n>4</n></r></e><v>+</v><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&apos;diff(u^2+v+w^4+x*7+y^3+w*3,u,2,v,1,w,1,x,4,y,1,z,6);</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o35) </lbl><d><f diffstyle="yes"><r><e><r><s>d</s></r><r><n>15</n></r></e></r><r><s>d</s><h>*</h><e><r><v>u</v></r><r><n>2</n></r></e><h>*</h><s>d</s><h>*</h><v>v</v><h>*</h><s>d</s><h>*</h><v>w</v><h>*</h><s>d</s><h>*</h><e><r><v>x</v></r><r><n>4</n></r></e><h>*</h><s>d</s><h>*</h><v>y</v><h>*</h><s>d</s><h>*</h><e><r><v>z</v></r><r><n>6</n></r></e></r></f><h>*</h><r><p><e><r><v>y</v></r><r><n>3</n></r></e><v>+</v><n>7</n><h>*</h><v>x</v><v>+</v><e><r><v>w</v></r><r><n>4</n></r></e><v>+</v><n>3</n><h>*</h><v>w</v><v>+</v><v>v</v><v>+</v><e><r><v>u</v></r><r><n>2</n></r></e></p></r></d>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>sqrt(x(1));</line>
+<line></line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o44) </lbl><q><fn><r><fnm>x</fnm></r><r><p><n>1</n></p></r></fn></q>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>sqrt(x(10));</line>
+<line></line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o45) </lbl><q><fn><r><fnm>x</fnm></r><r><p><n>10</n></p></r></fn></q>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>sqrt(x(100));</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o46) </lbl><q><fn><r><fnm>x</fnm></r><r><p><n>100</n></p></r></fn></q>
+</mth></output>
+</cell>
+
+<cell type="code">
+<input>
+<editor type="input">
+<line>&quot;HelloWorld&quot;;</line>
+</editor>
+</input>
+<output>
+<mth><lbl>(%o48) </lbl><st>HelloWorld</st>
+</mth></output>
+</cell>
+
+</wxMaximaDocument>
