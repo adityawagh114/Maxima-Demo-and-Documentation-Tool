@@ -263,11 +263,17 @@
    (if (string/=	(cell-output_string cellobject) "NotDefined" )   
      (setf final_output (modify_output (cell-output_string cellobject))))
     
-   (if (= startindex 1) 
+   (if (and (> (length cell_array) 1 ) (= startindex 1  )) 
      (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
        (format texinfo_string "@node Cell~a,Cell~a,Top,Top~%~%" startindex  ( + startindex 1))))   
 
-   (if (= startindex endindex) 
+   (if (= (length cell_array) 1 ) 
+     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+       (format texinfo_string "@node Cell~a,,Top,Top~%~%" startindex  ( + startindex 1))))   
+
+
+
+   (if (and (> (length cell_array) 1 ) (= startindex endindex)) 
      (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
        (format texinfo_string "@node Cell~a, ,Cell~a,Top~%~%
       " startindex ( - startindex 1))))
