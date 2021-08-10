@@ -15,9 +15,9 @@ display_output_xml (f%,[location]) :=
                                  e: second (parse_token_list (tokens)),
                                  hh: display_expression_from (tokens),
                                  file_output_append:true,
-                                 (if emptyp(location) then location:"" else with_stdout(location[1],print(hh))),
-                                 str1:string (e),
-                                 str2:tex1(e),
+                                 (if emptyp(location) then [] else with_stdout(location[1],print(hh))),
+                                 str1:sconcat(str1,string (e)," , "),
+                                 str2:sconcat(str2,tex1(e)," , "),
                                  str3:e)),
                                   arr:[str1,str2,str3],
                                   arr);
