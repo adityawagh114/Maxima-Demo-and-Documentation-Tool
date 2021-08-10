@@ -1,0 +1,239 @@
+ \input texinfo 
+
+@node Top, Cell1,(dir),(dir)
+@top
+
+ 
+ 
+ 
+ 
+  @node Cell1,Cell2,Top,Top
+
+
+Input:
+@example
+        abs(-40);
+@end example 
+
+@c Maxima expression:-
+  @c 40
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+40 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$40$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell2,Cell3,Cell1,Top
+
+                  
+
+Input:
+@example
+        f(x)=x*5;
+@end example 
+
+@c Maxima expression:-
+  @c f(x) = 5*x
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+f(x) = 5 x 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$f\left(x\right)=5\,x$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell3,Cell4,Cell2,Top
+
+                  
+
+Input:
+@example
+        abs(f(x));
+@end example 
+
+@c Maxima expression:-
+  @c abs(f(x))
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+abs(f(x)) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$\left| f\left(x\right)\right| $$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell4,Cell5,Cell3,Top
+
+                  
+
+Input:
+@example
+        declare(
+            [
+         c00,c01,c02,c03,c04,c05,c06,c07,c08,c09,
+                c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,
+                c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,
+                c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,
+                c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,
+                c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,
+                c60,c61,c62,c63,c64,c65,c66,c67,c68,c69,
+                c70,c71,c72,c73,c74,c75,c76,c77,c78,c79,
+                c80,c81,c82,c83,c84,c85,c86,c87,c88,c89,
+                c90,c91,c92,c93,c94,c95,c96,c97,c98,c99,
+                c100
+            ], complex)$
+        depends(
+            [
+                c00,c01,c02,c03,c04,c05,c06,c07,c08,c09,
+                c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,
+            c20,c21,c22,c23,c24,c25,c26,c27,c28,c29,
+                c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,
+                c40,c41,c42,c43,c44,c45,c46,c47,c48,c49,
+        c50,c51,c52,c53,c54,c55,c56,c57,c58,c59,
+                c60,c61,c62,c63,c64,c65,c66,c67,c68,c69,
+                c70,c71,c72,c73,c74,c75,c76,c77,c78,c79,
+                c80,c81,c82,c83,c84,c85,c86,c87,c88,c89,
+                c90,c91,c92,c93,c94,c95,c96,c97,c98,c99,
+                c100
+            ], t)$
+        c_1:  c00$
+        c_10: c00+c01+c02+c03+c04+c05+c06+c07+c08+c09$
+        c_100:c00+c01+c02+c03+c04+c05+c06+c07+c08+c09+
+              c10+c11+c12+c13+c14+c15+c16+c17+c18+c19+
+              c20+c21+c22+c23+c24+c25+c26+c27+c28+c29+
+              c30+c31+c32+c33+c34+c35+c36+c37+c38+c39+
+              c40+c41+c42+c43+c44+c45+c46+c47+c48+c49+
+              c50+c51+c52+c53+c54+c55+c56+c57+c58+c59+
+              c60+c61+c62+c63+c64+c65+c66+c67+c68+c69+
+              c70+c71+c72+c73+c74+c75+c76+c77+c78+c79+
+         c80+c81+c82+c83+c84+c85+c86+c87+c88+c89+
+              c90+c91+c92+c93+c94+c95+c96+c97+c98+c99+
+              c100$
+@end example 
+  
+ 
+ 
+ 
+@node Cell5,Cell6,Cell4,Top
+
+                  
+
+Input:
+@example
+        conjugate(c_1);
+        
+@end example 
+
+@c Maxima expression:-
+  @c c00
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+c00 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$c_{0}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell6,Cell7,Cell5,Top
+
+                  
+
+Input:
+@example
+        conjugate(c_10);
+        
+@end example 
+
+@c Maxima expression:-
+  @c c09+c08+c07+c06+c05+c04+c03+c02+c01+c00
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+c09 + c08 + c07 + c06 + c05 + c04 + c03 + c02 + c01 + c00 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$c_{9}+c_{8}+c_{7}+c_{6}+c_{5}+c_{4}+c_{3}+c_{2}+c_{1}+c_{0}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell7, ,Cell6,Top
+
+
+      
+Input:
+@example
+        conjugate(c_100);
+@end example 
+
+@c Maxima expression:-
+  @c c99+c98+c97+c96+c95+c94+c93+c92+c91+c90+c89+c88+c87+c86+c85+c84+c83+c82+c81+c80+c79+c78+c77+c76+c75+c74+c73+c72+c71+c70+c69+c68+c67+c66+c65+c64+c63+c62+c61+c60+c59+c58+c57+c56+c55+c54+c53+c52+c51+c50+c49+c48+c47+c46+c45+c44+c43+c42+c41+c40+c39+c38+c37+c36+c35+c34+c33+c32+c31+c30+c29+c28+c27+c26+c25+c24+c23+c22+c21+c20+c19+c18+c17+c16+c15+c14+c13+c12+c11+c100+c10+c09+c08+c07+c06+c05+c04+c03+c02+c01+c00
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+c99 + c98 + c97 + c96 + c95 + c94 + c93 + c92 + c91 + c90 + c89 + c88 + c87
+ + c86 + c85 + c84 + c83 + c82 + c81 + c80 + c79 + c78 + c77 + c76 + c75 + c74
+ + c73 + c72 + c71 + c70 + c69 + c68 + c67 + c66 + c65 + c64 + c63 + c62 + c61
+ + c60 + c59 + c58 + c57 + c56 + c55 + c54 + c53 + c52 + c51 + c50 + c49 + c48
+ + c47 + c46 + c45 + c44 + c43 + c42 + c41 + c40 + c39 + c38 + c37 + c36 + c35
+ + c34 + c33 + c32 + c31 + c30 + c29 + c28 + c27 + c26 + c25 + c24 + c23 + c22
+ + c21 + c20 + c19 + c18 + c17 + c16 + c15 + c14 + c13 + c12 + c11 + c100 + c10
+ + c09 + c08 + c07 + c06 + c05 + c04 + c03 + c02 + c01 + c00 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$c_{99}+c_{98}+c_{97}+c_{96}+c_{95}+c_{94}+c_{93}+c_{92}+c_{91}+c_{90}+c_{89}+c_{88}+c_{87}+c_{86}+c_{85}+c_{84}+c_{83}+c_{82}+c_{81}+c_{80}+c_{79}+c_{78}+c_{77}+c_{76}+c_{75}+c_{74}+c_{73}+c_{72}+c_{71}+c_{70}+c_{69}+c_{68}+c_{67}+c_{66}+c_{65}+c_{64}+c_{63}+c_{62}+c_{61}+c_{60}+c_{59}+c_{58}+c_{57}+c_{56}+c_{55}+c_{54}+c_{53}+c_{52}+c_{51}+c_{50}+c_{49}+c_{48}+c_{47}+c_{46}+c_{45}+c_{44}+c_{43}+c_{42}+c_{41}+c_{40}+c_{39}+c_{38}+c_{37}+c_{36}+c_{35}+c_{34}+c_{33}+c_{32}+c_{31}+c_{30}+c_{29}+c_{28}+c_{27}+c_{26}+c_{25}+c_{24}+c_{23}+c_{22}+c_{21}+c_{20}+c_{19}+c_{18}+c_{17}+c_{16}+c_{15}+c_{14}+c_{13}+c_{12}+c_{11}+c_{100}+c_{10}+c_{9}+c_{8}+c_{7}+c_{6}+c_{5}+c_{4}+c_{3}+c_{2}+c_{1}+c_{0}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@bye
+ 
