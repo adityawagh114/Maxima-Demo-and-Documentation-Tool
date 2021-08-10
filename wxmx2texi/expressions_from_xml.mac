@@ -86,6 +86,10 @@ additional_diff_analysis4 (ff,ele1,ele2,ele3,ele4) :=([apostrophe, 'diff, paren_
 additional_diff_analysis5 (ff,ele1,ele2,ele3,ele4,ele5) :=([apostrophe, 'diff, paren_left,ff,comma,apply1(ele1,r1,r2),comma,apply1(ele2,r1,r2),comma,apply1(ele3,r1,r2),comma,apply1(ele4,r1,r2),comma,apply1(ele5,r1,r2),paren_right]);
 additional_diff_analysis6 (ff,ele1,ele2,ele3,ele4,ele5,ele6) :=([apostrophe, 'diff, paren_left,ff,comma,apply1(ele1,r1,r2),comma,apply1(ele2,r1,r2),comma,apply1(ele3,r1,r2),comma,apply1(ele4,r1,r2),comma,apply1(ele5,r1,r2),comma,apply1(ele6,r1,r2),paren_right]);
 
+defrule(rule_for_abs ,a()(aa),['abs,paren_left,aa,paren_right]);
+
+defrule(rule_for_conjugates ,cj()(aa),['conjugate,paren_left,aa,paren_right]);
+
 
 tokens_from (e%) :=
  (apply1 (e%,  
@@ -98,6 +102,8 @@ tokens_from (e%) :=
               rule_for_strings,
               rule_for_subscripts,
               rule_for_subsuperscripts,
+              rule_for_abs,
+              rule_for_conjugates,
               rule_for_sums,
               rule_for_lsums,
               rule_for_products,
