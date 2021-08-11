@@ -392,7 +392,10 @@
                     (if (string/=	(cell-output_string cellobject) "NotDefined")
                       (progn
                              (defparameter maxima_string (mfuncall '$display_output_xml1 final_output))
+                             (defparameter maxima_string (subseq maxima_string 1 ))                              
                              (defparameter tex_string (mfuncall '$display_output_xml2 final_output))
+                             (defparameter tex_string (subseq tex_string 1 ))
+
                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
                                (format texinfo_string "~%@c Maxima expression:-~%  @c ~a" maxima_string)) 
                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 

@@ -20,7 +20,8 @@
       (funcall g))))
 
 (defun sanitize-unicode-ops (l)
-  (let*
+  ( 
+    let*
     ((m (subst '$- '$− l))
      (n (subst '$* '$· m)))
     ;; What else? Unicode plus sign? Other multiplication signs?

@@ -12,12 +12,25 @@ display_output_xml (f%,[location]) :=
                                  label: strim (" ", first (first (label_plus_bits))),
                                  expr_bits: second (label_plus_bits),
                                  tokens: tokens_from (expr_bits),
+                                 if string(tokens[1])="matrix" then (
+                                  pop(tokens),
+                                  pop(tokens),
+                                  pop(tokens),
+                                  push(?makealias("("),tokens), 
+                                  push('matrix,tokens),
+                                   tokens:reverse(tokens),
+                                    temp:[tokens[1]],
+                                   for i:2 while i<=length(tokens)-1 do
+                                   (if (tokens[i+1]= ?makealias("[")) then([]) else 
+                                      (push(tokens[i],temp))),
+                                    push('matrix,temp),
+                                   tokens:temp),                
                                  e: second (parse_token_list (tokens)),
                                  hh: display_expression_from (tokens),
                                  file_output_append:true,
                                  (if emptyp(location) then [] else with_stdout(location[1],print(hh))),
-                                 str1:sconcat(str1,string (e)," , "),
-                                 str2:sconcat(str2,tex1(e)," , "),
+                                 str1:sconcat(str1,", ",string (e)),
+                                 str2:sconcat(str2,", ",tex1(e)),
                                  str3:e)),
                                   arr:[str1,str2,str3],
                                   arr);
