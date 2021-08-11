@@ -91,6 +91,16 @@ defrule(rule_for_abs ,a()(aa),['abs,paren_left,aa,paren_right]);
 defrule(rule_for_conjugates ,cj()(aa),['conjugate,paren_left,aa,paren_right]);
 
 
+defrule(rule_for_mtd ,mtd()(n()(aa)),aa);
+
+matchdeclare (uu, lambda ([e], not atom(e) and op(e) = mtr()));
+defrule (rule_for_mtr, uu, [comma,square_bracket_left, args(uu), square_bracket_right]);
+
+matchdeclare (tt, lambda ([e], not atom(e) and op(e) = tb("true")));
+defrule (rule_for_table, tt, ['matrix,paren_left, args(tt), paren_right]);
+
+
+
 tokens_from (e%) :=
  (apply1 (e%,  
               rule_for_diffs1, 
@@ -100,6 +110,9 @@ tokens_from (e%) :=
               rule_for_diffs5, 
               rule_for_diffs6, 
               rule_for_strings,
+              rule_for_table,
+              rule_for_mtr,
+              rule_for_mtd,
               rule_for_subscripts,
               rule_for_subsuperscripts,
               rule_for_abs,
@@ -124,6 +137,7 @@ tokens_from (e%) :=
 
 split_mth (e%) :=
   block ([aa: args (e%), ii],
+  
          ii: sublist_indices (aa, lambda ([e1], not atom(e1) and op(e1) = lbl())),
          ii: append (ii, [length (aa) + 1]),
          makelist (aa[ii[j]] = makelist (aa[i], i, ii[j] + 1, ii[j + 1] - 1), j, 1, length (ii) - 1));
