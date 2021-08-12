@@ -91,7 +91,10 @@ defrule(rule_for_abs ,a()(aa),['abs,paren_left,aa,paren_right]);
 defrule(rule_for_conjugates ,cj()(aa),['conjugate,paren_left,aa,paren_right]);
 
 
-defrule(rule_for_mtd ,mtd()(n()(aa)), [comma,aa]);
+defrule(rule_for_mtd1 ,mtd()(n()(aa)), [comma,aa]);
+defrule (rule_for_mtd2, mtd()(f()(aa, bb)), [comma,paren_left, aa, paren_right, forward_slash, paren_left, bb, paren_right]);
+defrule(rule_for_mtd3 ,mtd()(v()(aa)), [comma,aa]);
+
 
 matchdeclare (uu, lambda ([e], not atom(e) and op(e) = mtr()));
 defrule (rule_for_mtr, uu, [comma,square_bracket_left, args(uu), square_bracket_right]);
@@ -112,7 +115,9 @@ tokens_from (e%) :=
               rule_for_strings,
               rule_for_table,
               rule_for_mtr,
-              rule_for_mtd,
+              rule_for_mtd1,
+              rule_for_mtd2,
+              rule_for_mtd3,
               rule_for_subscripts,
               rule_for_subsuperscripts,
               rule_for_abs,
