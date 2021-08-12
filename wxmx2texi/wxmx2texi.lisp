@@ -10,24 +10,27 @@
      (namestring (probe-file src)))
 
 (defun $get_temp(str)
-      (defparameter file_location  (uiop:tmpize-pathname (pathname  str)))
-      (defparameter foldername (pathname-name (pathname file_location )))
+      (let ((file_location) (foldername) (folder_location) ))
+      (setq file_location  (uiop:tmpize-pathname (pathname  str)))
+      (setq foldername (pathname-name (pathname file_location )))
            ;; a radome name file also gets created by the function which is not required
       (delete-file (pathname file_location))
-      (defparameter folder_location ( concatenate 'string str foldername "/"))
+      (setq folder_location ( concatenate 'string str foldername "/"))
       (ensure-directories-exist (pathname folder_location))
          foldername)
 
 (defun $change_output_location(output_folder temp_folder_name folder_name)
-      (defparameter new_output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))           
+(let ((new_output_folder)))
+      (setq new_output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))           
        new_output_folder)
 
 ;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
 (defun $unzipfile(src output_folder temp_folder_name folder_name)
-    (setf dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" ))
+    (let ((dest)))
+    (setq dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" ))
     (ensure-directories-exist (pathname dest))
     (zip:unzip (pathname src) (pathname dest)) 
-    (setf dest (concatenate 'string dest "content.xml")))
+    (setq dest (concatenate 'string dest "content.xml")))
 
 ;;pass cell index and this will return the lines one by one the .mac will know the total number of lines and it will convert 
 ;; Here Classes are created to store the properties of the XML. Data of the parsed XML is stored here.
@@ -224,7 +227,8 @@
   strvector)
 
 (defun transform_string (str)
-  (defparameter newstr  (make-array 0
+(let ((newstr)))
+  (setq newstr  (make-array 0
                                         :element-type 'character
                                         :fill-pointer 0
                                         :adjustable t))
