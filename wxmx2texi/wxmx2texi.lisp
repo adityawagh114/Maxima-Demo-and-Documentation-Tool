@@ -85,28 +85,30 @@
 
 ;;function to parse the xml (pass the file location as argument. Example  (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
 (defun $xmlparser (file_location olocation folder_location)
-      (defparameter str (string ""))
-  (setf strvector  (make-array 0 :fill-pointer 0 :adjustable t))
+  (let ((str)(strvector)(root)(document_array)(document)(cells)(document_object)(attributes_map)(document_attribute_array)(document_cell_array)   ))
+  (setq str (string ""))
+  (setq strvector  (make-array 0 :fill-pointer 0 :adjustable t))
   ;; add the location of the content.xml to test
-  (defparameter root (plump:parse (pathname file_location)))
+  (setq root (plump:parse (pathname file_location)))
   ;; (plump:CHILD-ELEMENTS root) will return vector of childrens of the root
-  (setf document_array (plump:CHILD-ELEMENTS root))
+  (setq document_array (plump:CHILD-ELEMENTS root))
   ;; the first element of the vector will be the node of the document 
-  (setf document (aref document_array 0))
+  (setq document (aref document_array 0))
   ;; cells is a vector of all the cell in the document
-  (setf cells (plump:child-elements document))
+  (setq cells (plump:child-elements document))
   ;; class of document type
-  (setf document_object (make-instance 'document))
+  (setq document_object (make-instance 'document))
   ;; (plump:attributes document) will return a map containing  key and value pairs of the attributes
-  (setf attributes_map (plump:attributes document))
+  (setq attributes_map (plump:attributes document))
   ;; vector to store values of attributes of document
-  (setf document_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
+  (setq document_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
   ;; vector to store cells of the document
-  (setf document_cell_array  (make-array 0 :fill-pointer 0 :adjustable t))
+  (setq document_cell_array  (make-array 0 :fill-pointer 0 :adjustable t))
 
   (maphash #'(lambda (key value) 
                ;;store key value in the structure attribute
-               (setf item (make-instance 'attribute))
+               (let ((item)))
+               (setq item (make-instance 'attribute))
                (setf (attribute-name item) key)
                (setf (attribute-value item) value)
                ;; appending each item to document_attribute_array
@@ -116,32 +118,35 @@
 
   ;; looping the cells array
   (dotimes (i  (length cells))
-
-    (setf cell (aref cells i ))
+    (let ((cell)(cell_object)(cell_attribute_array)(attributes_map) ))
+    (setq cell (aref cells i ))
     ;;cell_object is a instance of cell object
-    (setf cell_object (make-instance 'cell))
+    (setq cell_object (make-instance 'cell))
     ;; array to store attributes of the cell
-    (setf cell_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
-    (setf attributes_map (plump:attributes cell))
+    (setq cell_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
+    (setq attributes_map (plump:attributes cell))
 
     (maphash #'(lambda (key value) 
                  ;;store key value in the structure attributes
-                 (setf item (make-instance 'attribute))
+                 (let ((item)))
+                 (setq item (make-instance 'attribute))
                  (setf (attribute-name item) key)
                  (setf (attribute-value item) value)
                  ;; appending each item to cell_attribute_array
                  (vector-push-extend item cell_attribute_array)) attributes_map)
     ;; storing the cell_attribute_array in cell_object
     (setf (cell-attributes cell_object) cell_attribute_array)
-    ;; child of cell, it contains editor or input+editor      
-    (setf child (plump:CHILD-ELEMENTS cell))
+    ;; child of cell, it contains editor or input+editor  
+    (let ((child)(first_child)))    
+    (setq child (plump:CHILD-ELEMENTS cell))
     ;; the first_child will contain the first child of the cell and it will be used to know whether the cell has editor or input as first child
-    (setf first_child (aref child 0)) 
+    (setq first_child (aref child 0)) 
 
     (if (= 3 (length child))
     (progn
-          (setf output_node (aref child 2))
-          (defparameter output_str (plump:serialize output_node nil ))      
+           (let ((output_node)(output_str)))
+          (setq output_node (aref child 2))
+          (setq output_str (plump:serialize output_node nil ))      
           (setf (cell-output_string cell_object) output_str))
           (setf (cell-output_string cell_object) "NotDefined"))
     
@@ -149,33 +154,37 @@
     (if (string-equal "input" (plump:tag-name first_child))
         (progn ;; if it is of type input
          ;; this is editor which is inside input 
-         (setf editor (aref child 1)) 
+         (let ((editor)(input_object)(input_object_array)(attributes_map)(input_attribute_array)))
+         (setq editor (aref child 1)) 
          ;;object of type input 
-         (setf input_object (make-instance 'input))
+         (setq input_object (make-instance 'input))
          ;;input object array to store in cell_object
-         (setf input_object_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (setq input_object_array  (make-array 0 :fill-pointer 0 :adjustable t))
          ;; storing the attributes of the editor which is inside input 
-         (setf attributes_map (plump:attributes editor))
-         (setf input_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (setq attributes_map (plump:attributes editor))
+         (setq input_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
 
          (maphash #'(lambda (key value) 
                       ;;store key value in the structure attributes
-                      (setf item (make-instance 'attribute))
+                      (let  ((item)))
+                      (setq item (make-instance 'attribute))
                       (setf (attribute-name item) key)
                       (setf (attribute-value item) value)
                       (vector-push-extend item input_attribute_array)) attributes_map) 
          ;; input_attribute_array will be stored in input_object
          (setf (input-attributes input_object) input_attribute_array)
          ;; lines if a vector of all the line in the editor
-         (setf lines (plump:CHILD-ELEMENTS editor)) 
+         (let ((lines)(input_lines_array)))
+         (setq lines (plump:CHILD-ELEMENTS editor)) 
          ;;to stores all the line of the input
-         (setf input_lines_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (setq input_lines_array  (make-array 0 :fill-pointer 0 :adjustable t))
 
          ;; looping through the lines
          (dotimes (i  (length lines))
-           (setf mathString (aref lines i ))
+           (let ((mathString)(str)))
+           (setq mathString (aref lines i ))
            (vector-push-extend (plump:text mathstring) strvector)
-           (setf str (concatenate 'string str  ",  " (plump:text mathstring)))
+           (setq str (concatenate 'string str  ",  " (plump:text mathstring)))
            ;; store mathString in input_lines_array
            (vector-push-extend (plump:text mathstring) input_lines_array))
 
@@ -187,26 +196,30 @@
         (progn 
          ;; else (the cell only contains the editor)
          ;; everthing done for editor is similar to input above
-         (setf editor first_child)
-         (setf editor_object (make-instance 'editor))
-         (setf editor_object_array  (make-array 0 :fill-pointer 0 :adjustable t))
-         (setf editor_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
-         (setf attributes_map (plump:attributes editor))
+         (let ((editor)(editor_object)(editor_object_array)(editor_attribute_array)(attributes_map)  ))
+         (setq editor first_child)
+         (setq editor_object (make-instance 'editor))
+         (setq editor_object_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (setq editor_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (setq attributes_map (plump:attributes editor))
 
          (maphash #'(lambda (key value) 
                       ;;store key value in the structure attributes
-                      (setf item (make-instance 'attribute))
+                      (let ((item)))
+                      (setq item (make-instance 'attribute))
                       (setf (attribute-name item) key)
                       (setf (attribute-value item) value)
                       (vector-push-extend item editor_attribute_array)) attributes_map) 
 
          (setf (editor-attributes editor_object) editor_attribute_array)
-         (setf lines (plump:CHILD-ELEMENTS editor))
-         (setf editor_lines_array  (make-array 0 :fill-pointer 0 :adjustable t))
+         (let ((lines)(editor_lines_array)))
+         (setq lines (plump:CHILD-ELEMENTS editor))
+         (setq editor_lines_array  (make-array 0 :fill-pointer 0 :adjustable t))
 
          (dotimes (i  (length lines))
-             (setf mathString (aref lines i ))
-             (setf str (concatenate 'string str ",  " (plump:text mathstring)))
+             (let ((mathString)(str)))
+             (setq mathString (aref lines i ))
+             (setq str (concatenate 'string str ",  " (plump:text mathstring)))
              (vector-push-extend (plump:text mathstring) strvector)
              (vector-push-extend (plump:text mathstring) editor_lines_array))  
 
@@ -218,9 +231,10 @@
   (vector-push-extend cell_object document_cell_array))
   ;; document_cell_array will stored in document_object
   (setf (document-cells document_object) document_cell_array)
-  (setf str (concatenate 'string str "]"))
-  (setf str (subseq str 1))
-  (setf str (concatenate 'string "[" str))
+  (let ((str)))
+  (setq str (concatenate 'string str "]"))
+  (setq str (subseq str 1))
+  (setq str (concatenate 'string "[" str))
 
   (vector-push-extend "Wx-endofloop" strvector)
   (printobject document_object olocation folder_location)
@@ -240,20 +254,23 @@
              newstr)
 
 (defun modify_output(str)
-   (setf str   (concatenate 'string  "<outputs>" str))
-   (setf str   (concatenate 'string   str "</outputs>"))
+    (let ((str)))
+   (setq str   (concatenate 'string  "<outputs>" str))
+   (setq str   (concatenate 'string   str "</outputs>"))
     str)
 
 ;; function to print the parsed objects (pass the object as argument). Example  (printobject (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
 (defun printobject (document_obj texi_location folder_location)
-         (setf image_number 1)
+         (let ((image_number)))
+         (setq image_number 1)
 (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
   (format texinfo_string 
-  " \\input texinfo ~%~%@node Top, Cell1,(dir),(dir)~%@top~%"))   
-  (setf attribute_array (document-attributes document_obj))
+  " \\input texinfo ~%~%@node Top, Cell1,(dir),(dir)~%@top~%"))  
+  (let ((attribute_array)(single_attribute))) 
+  (setq attribute_array (document-attributes document_obj))
 
   (dotimes (i  (length attribute_array))
-    (setf single_attribute (aref attribute_array i )))
+    (setq single_attribute (aref attribute_array i )))
   
   (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
     (format texinfo_string "~% ~% ~% ~% ~%  "))
@@ -262,10 +279,11 @@
   (setq endindex (length cell_array))
 
   (dotimes (i (length cell_array))
-    (setf cellobject (aref cell_array i ))
+     (let ((cellobject)(final_output) ))
+    (setq cellobject (aref cell_array i ))
 
    (if (string/=	(cell-output_string cellobject) "NotDefined" )   
-     (setf final_output (modify_output (cell-output_string cellobject))))
+     (setq final_output (modify_output (cell-output_string cellobject))))
     
    (if (and (> (length cell_array) 1 ) (= startindex 1  )) 
      (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
@@ -287,13 +305,15 @@
                   (format texinfo_string "@node Cell~a,Cell~a,Cell~a,Top~%
                   ~%" startindex (+ startindex 1) (- startindex 1))))
                 (setq startindex (+ startindex 1))
-                (setf attribute_array (cell-attributes cellobject))
+                (let ((attribute_array)))
+                (setq attribute_array (cell-attributes cellobject))
                 (setq type_number 0)
 
        (if (= 2 (length attribute_array))
              (progn
-                (setf first_attribute (aref attribute_array 0 ))
-                (setf second_attribute (aref attribute_array 1 ))
+                (let ((first_attribute)(second_attribute)))
+                (setq first_attribute (aref attribute_array 0 ))
+                (setq second_attribute (aref attribute_array 1 ))
                 (if (and (string= (attribute-value first_attribute) "section" ) (string= (attribute-value second_attribute) "2")) 
                       (progn
                         (setq type_number 1)
@@ -320,7 +340,8 @@
                               (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                                 (format texinfo_string "~%@subsubsection ")))))
              (progn
-                (setf first_attribute (aref attribute_array 0 ))
+                (let ((first_attribute)))
+                (setq first_attribute (aref attribute_array 0 ))
                 (if (string= (attribute-value first_attribute) "text") 
                        (progn
                         (setq type_number 6)))
@@ -329,29 +350,33 @@
                         (setq type_number 7)
                         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                           (format texinfo_string  "~%Input:~%@example"))))))
-    ;;type of cell     
-    (setf editor_array (cell-editors cellobject))
-    (setf input_array (cell-inputs cellobject))
+    ;;type of cell   
+    (let ((editor_array)(input_array)))  
+    (setq editor_array (cell-editors cellobject))
+    (setq input_array (cell-inputs cellobject))
 
     (if (= (length editor_array) 1)
        (progn  ;;of type editor
-        (setf editorobject (aref  editor_array 0))
-        (setf attribute_array (editor-attributes editorobject))
+       (let ((editorobject)(attribute_array)))
+        (setq editorobject (aref  editor_array 0))
+        (setq attribute_array (editor-attributes editorobject))
 
         (dotimes (i  (length attribute_array))
-          (setf single_attribute (aref attribute_array i)))       
-          (setf linesarray (editor-lines editorobject))
+        (let ((single_attribute)(linesarray)))
+          (setq single_attribute (aref attribute_array i)))       
+          (setq linesarray (editor-lines editorobject))
 
         (dotimes (i  (length linesarray))
-                (setf strline (aref linesarray i))
-                (setf strline (transform_string strline))
+                (let ((strline)))
+                (setq strline (aref linesarray i))
+                (setq strline (transform_string strline))
 
                 (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline))
                     (progn
                        ;;add image
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                          (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
-                             (setf image_number (+ 1 image_number)))
+                             (setq image_number (+ 1 image_number)))
                     (progn
                             (if (= 7 type_number)
                             (progn
@@ -361,24 +386,28 @@
                               (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                                 (format texinfo_string  " ~a ~%" strline))))))))
               (progn
-        (setf inputobject (aref  input_array 0))
-        (setf attribute_array (input-attributes inputobject))
+              (let ((inputobject)(attribute_array)))
+        (setq inputobject (aref  input_array 0))
+        (setq attribute_array (input-attributes inputobject))
 
         (dotimes (i  (length attribute_array))
-          (setf single_attribute (aref attribute_array i)))       
+          (let ((single_attribute)))
+          (setq single_attribute (aref attribute_array i)))       
 
-        (setf linesarray (input-lines inputobject))
+          (let ((linesarray)))
+        (setq linesarray (input-lines inputobject))
 
         (dotimes (i  (length linesarray))
-                 (setf strline (aref linesarray i))
-                 (setf strline (transform_string strline))
+                  (let ((strline)))
+                 (setq strline (aref linesarray i))
+                 (setq strline (transform_string strline))
 
                 (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline))
                     (progn
                        ;;add image
                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                          (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
-                             (setf image_number (+ 1 image_number)))
+                             (setq image_number (+ 1 image_number)))
                     (progn
                        (if (= 7 type_number )
                             (progn
@@ -395,10 +424,11 @@
                                     
                     (if (string/=	(cell-output_string cellobject) "NotDefined")
                       (progn
-                             (defparameter maxima_string (mfuncall '$display_output_xml1 final_output))
-                             (defparameter maxima_string (subseq maxima_string 1 ))                              
-                             (defparameter tex_string (mfuncall '$display_output_xml2 final_output))
-                             (defparameter tex_string (subseq tex_string 1 ))
+                              (let ((maxima_string)(tex_string)))
+                             (setq maxima_string (mfuncall '$display_output_xml1 final_output))
+                             (setq maxima_string (subseq maxima_string 1 ))                              
+                             (setq tex_string (mfuncall '$display_output_xml2 final_output))
+                             (setq tex_string (subseq tex_string 1 ))
 
                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
                                (format texinfo_string "~%@c Maxima expression:-~%  @c ~a" maxima_string)) 
