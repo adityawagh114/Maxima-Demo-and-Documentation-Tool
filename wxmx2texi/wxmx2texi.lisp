@@ -261,19 +261,18 @@
 
 ;; function to print the parsed objects (pass the object as argument). Example  (printobject (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
 (defun printobject (document_obj texi_location folder_location)
+(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
          (let ((image_number)))
          (setq image_number 1)
-(with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
   (format texinfo_string 
-  " \\input texinfo ~%~%@node Top, Cell1,(dir),(dir)~%@top~%"))  
+  " \\input texinfo ~%~%@node Top, Cell1,(dir),(dir)~%@top~%")  
   (let ((attribute_array)(single_attribute))) 
   (setq attribute_array (document-attributes document_obj))
 
   (dotimes (i  (length attribute_array))
     (setq single_attribute (aref attribute_array i )))
   
-  (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-    (format texinfo_string "~% ~% ~% ~% ~%  "))
+    (format texinfo_string "~% ~% ~% ~% ~%  ")
   (setf cell_array (document-cells document_obj))
   (setq startindex 1)
   (setq endindex (length cell_array))
@@ -286,24 +285,20 @@
      (setq final_output (modify_output (cell-output_string cellobject))))
     
    (if (and (> (length cell_array) 1 ) (= startindex 1  )) 
-     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-       (format texinfo_string "@node Cell~a,Cell~a,Top,Top~%~%" startindex  ( + startindex 1))))   
+       (format texinfo_string "@node Cell~a,Cell~a,Top,Top~%~%" startindex  ( + startindex 1)))   
 
    (if (= (length cell_array) 1 ) 
-     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-       (format texinfo_string "@node Cell~a,,Top,Top~%~%" startindex  ( + startindex 1))))   
+       (format texinfo_string "@node Cell~a,,Top,Top~%~%" startindex  ( + startindex 1)))   
 
 
 
    (if (and (> (length cell_array) 1 ) (= startindex endindex)) 
-     (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
        (format texinfo_string "@node Cell~a, ,Cell~a,Top~%~%
-      " startindex ( - startindex 1))))
+      " startindex ( - startindex 1)))
 
         (if (and (< startindex endindex) (> startindex 1) )        
-                (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
                   (format texinfo_string "@node Cell~a,Cell~a,Cell~a,Top~%
-                  ~%" startindex (+ startindex 1) (- startindex 1))))
+                  ~%" startindex (+ startindex 1) (- startindex 1)))
                 (setq startindex (+ startindex 1))
                 (let ((attribute_array)))
                 (setq attribute_array (cell-attributes cellobject))
@@ -317,28 +312,23 @@
                 (if (and (string= (attribute-value first_attribute) "section" ) (string= (attribute-value second_attribute) "2")) 
                       (progn
                         (setq type_number 1)
-                            (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@chapter "))))
+                             (format texinfo_string "~%@chapter ")))
                  (if (and (string= (attribute-value first_attribute) "subsection" ) (string= (attribute-value second_attribute) "3" )) 
                       (progn
                         (setq type_number 2)
-                         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@section "))))
+                             (format texinfo_string "~%@section ")))
                  (if (and (string= (attribute-value first_attribute) "subsection" ) (string= (attribute-value second_attribute) "4" )) 
                         (progn
                         (setq type_number 3)
-                         (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@subsection "))))
+                             (format texinfo_string "~%@subsection ")))
                  (if (and (string= (attribute-value first_attribute) "subsection" ) (string= (attribute-value second_attribute) "5" )) 
                         (progn
                         (setq type_number 4)
-                          (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                             (format texinfo_string "~%@subsubsection "))))
+                             (format texinfo_string "~%@subsubsection ")))
                  (if (and (string= (attribute-value first_attribute) "subsection" ) (string= (attribute-value second_attribute) "6" )) 
                            (progn
                         (setq type_number 5)
-                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                                (format texinfo_string "~%@subsubsection ")))))
+                                (format texinfo_string "~%@subsubsection "))))
              (progn
                 (let ((first_attribute)))
                 (setq first_attribute (aref attribute_array 0 ))
@@ -348,8 +338,7 @@
                 (if (string= (attribute-value first_attribute) "code") 
                        (progn
                         (setq type_number 7)
-                        (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                          (format texinfo_string  "~%Input:~%@example"))))))
+                          (format texinfo_string  "~%Input:~%@example")))))
     ;;type of cell   
     (let ((editor_array)(input_array)))  
     (setq editor_array (cell-editors cellobject))
@@ -374,17 +363,14 @@
                 (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline))
                     (progn
                        ;;add image
-                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                         (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
+                         (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number )  
                              (setq image_number (+ 1 image_number)))
                     (progn
                             (if (= 7 type_number)
                             (progn
-                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                                (format texinfo_string  "~%        ~a" strline)))
+                                (format texinfo_string  "~%        ~a" strline))
                             (progn
-                              (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                                (format texinfo_string  " ~a ~%" strline))))))))
+                                (format texinfo_string  " ~a ~%" strline)))))))
               (progn
               (let ((inputobject)(attribute_array)))
         (setq inputobject (aref  input_array 0))
@@ -405,22 +391,18 @@
                 (if (or (search "wxplot2d" strline)  (search "wxplot3d" strline)  (search "wxdraw2d" strline) (search "wxdraw3d" strline))
                     (progn
                        ;;add image
-                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                         (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number ))  
+                         (format texinfo_string  "~%@ifnotinfo~%@image{~a/image~a,10cm}~%@end ifnotinfo~%" folder_location image_number )  
                              (setq image_number (+ 1 image_number)))
                     (progn
                        (if (= 7 type_number )
                             (progn
-                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                         (format texinfo_string  "~%        ~a" strline)))
+                         (format texinfo_string  "~%        ~a" strline))
                             (progn
-                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                         (format texinfo_string  " ~a ~%" strline)))))))))
+                         (format texinfo_string  " ~a ~%" strline))))))))
     
         (if (= type_number 7)
         (progn
-                       (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                         (format texinfo_string  "~%@end example ~%" strline))                             
+                         (format texinfo_string  "~%@end example ~%" strline)                             
                                     
                     (if (string/=	(cell-output_string cellobject) "NotDefined")
                       (progn
@@ -430,18 +412,11 @@
                              (setq tex_string (mfuncall '$display_output_xml2 final_output))
                              (setq tex_string (subseq tex_string 1 ))
 
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                               (format texinfo_string "~%@c Maxima expression:-~%  @c ~a" maxima_string)) 
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                               (format texinfo_string "~%@c Simplified 2D:- ~%" ))
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                               (format texinfo_string "~%Output:~%@ifinfo~%@example ~%"))
-                             (mfuncall '$display_output_xml3 final_output texi_location)     
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                               (format texinfo_string "~%@end example ~%@end ifinfo")) 
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create) 
-                               (format texinfo_string "~%@iftex~%@tex~%$$~a$$~%@end tex~%@end iftex" tex_string))))))
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
-                               (format texinfo_string "  ~% ~% ~% ~%")))
-                             (with-open-file (texinfo_string texi_location :direction :output :if-exists :append :if-does-not-exist :create)
+                               (format texinfo_string "~%@c Maxima expression:-~%  @c ~a" maxima_string) 
+                               (format texinfo_string "~%@c Simplified 2D:- ~%" )
+                               (format texinfo_string "~%Output:~%@ifinfo~%@example ~%")
+                             (mfuncall '$display_output_xml3 final_output texinfo_string)     
+                               (format texinfo_string "~%@end example ~%@end ifinfo") 
+                               (format texinfo_string "~%@iftex~%@tex~%$$~a$$~%@end tex~%@end iftex" tex_string)))))
+                               (format texinfo_string "  ~% ~% ~% ~%"))
                                (format texinfo_string "@bye~% ")))
