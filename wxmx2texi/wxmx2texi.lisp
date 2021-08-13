@@ -10,27 +10,27 @@
      (namestring (probe-file src)))
 
 (defun $get_temp(str)
-      (let ((file_location) (foldername) (folder_location) ))
-      (setq file_location  (uiop:tmpize-pathname (pathname  str)))
-      (setq foldername (pathname-name (pathname file_location )))
+      (let* 
+      ((file_location  (uiop:tmpize-pathname (pathname  str)))
+      (foldername (pathname-name (pathname file_location )))(folder_location))
            ;; a radome name file also gets created by the function which is not required
       (delete-file (pathname file_location))
       (setq folder_location ( concatenate 'string str foldername "/"))
       (ensure-directories-exist (pathname folder_location))
-         foldername)
+         foldername))
 
 (defun $change_output_location(output_folder temp_folder_name folder_name)
-(let ((new_output_folder)))
-      (setq new_output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" ))           
-       new_output_folder)
+(let* 
+  ((new_output_folder ( concatenate 'string output_folder temp_folder_name "/" folder_name ".texi" )))           
+       new_output_folder))
 
 ;;function to rename .wxmx from .zip and then unzip it and return the location of content.xml
 (defun $unzipfile(src output_folder temp_folder_name folder_name)
-    (let ((dest)))
-    (setq dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" ))
+    (let*
+    ((dest (concatenate 'string output_folder temp_folder_name "/" folder_name "/" )))
     (ensure-directories-exist (pathname dest))
     (zip:unzip (pathname src) (pathname dest)) 
-    (setq dest (concatenate 'string dest "content.xml")))
+    (setq dest (concatenate 'string dest "content.xml"))))
 
 ;;pass cell index and this will return the lines one by one the .mac will know the total number of lines and it will convert 
 ;; Here Classes are created to store the properties of the XML. Data of the parsed XML is stored here.
@@ -85,25 +85,25 @@
 
 ;;function to parse the xml (pass the file location as argument. Example  (xmlparser "d:/Users/ADITYA SANDEEP WAGH/portacle/content.xml"))
 (defun $xmlparser (file_location olocation folder_location)
-  (let ((str)(strvector)(root)(document_array)(document)(cells)(document_object)(attributes_map)(document_attribute_array)(document_cell_array)   ))
-  (setq str (string ""))
-  (setq strvector  (make-array 0 :fill-pointer 0 :adjustable t))
+  (let*
+  ((str (string ""))
+  (strvector  (make-array 0 :fill-pointer 0 :adjustable t))
   ;; add the location of the content.xml to test
-  (setq root (plump:parse (pathname file_location)))
+  (root (plump:parse (pathname file_location)))
   ;; (plump:CHILD-ELEMENTS root) will return vector of childrens of the root
-  (setq document_array (plump:CHILD-ELEMENTS root))
+  (document_array (plump:CHILD-ELEMENTS root))
   ;; the first element of the vector will be the node of the document 
-  (setq document (aref document_array 0))
+  (document (aref document_array 0))
   ;; cells is a vector of all the cell in the document
-  (setq cells (plump:child-elements document))
+  (cells (plump:child-elements document))
   ;; class of document type
-  (setq document_object (make-instance 'document))
+  (document_object (make-instance 'document))
   ;; (plump:attributes document) will return a map containing  key and value pairs of the attributes
-  (setq attributes_map (plump:attributes document))
+  (attributes_map (plump:attributes document))
   ;; vector to store values of attributes of document
-  (setq document_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
+  (document_attribute_array  (make-array 0 :fill-pointer 0 :adjustable t))
   ;; vector to store cells of the document
-  (setq document_cell_array  (make-array 0 :fill-pointer 0 :adjustable t))
+  (document_cell_array  (make-array 0 :fill-pointer 0 :adjustable t)))
 
   (maphash #'(lambda (key value) 
                ;;store key value in the structure attribute
@@ -238,7 +238,7 @@
 
   (vector-push-extend "Wx-endofloop" strvector)
   (printobject document_object olocation folder_location)
-  strvector)
+  strvector))
 
 (defun transform_string (str)
 (let ((newstr)))
