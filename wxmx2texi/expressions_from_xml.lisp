@@ -1,6 +1,7 @@
 ;; expressions_from_xml.lisp -- construct Maxima expressions from XML
 ;; copyright 2021 by Robert Dodier
 ;; I release this work under terms of the GNU General Public License
+#+sbcl (declaim (sb-ext:muffle-conditions cl:warning))
 
 (ql:quickload :plump)
 
@@ -15,11 +16,20 @@
         (attribute-values (mapcar #'(lambda (a) (plump:get-attribute x a)) attribute-keys))
         (children-list (coerce (plump:child-elements x) 'list))
         (children-exprs (mapcar '$expressions_from_xml children-list)))
+
        (if children-exprs
          `((mqapply) ((,op) ,@attribute-values) ,@children-exprs)
          `((mqapply) ((,op) ,@attribute-values) ,($expressions_from_xml (plump:first-child x))))))
      (t ;; Not sure what to do here.
        x)))
 
+  
   (defun $read_xml (f)
-  (plump:first-child (plump:parse (string f))))
+ (let*
+ ((node   (plump:parse (string f)))
+  (lnode (plump:GET-ELEMENTS-BY-TAG-NAME node "lbl"))
+  (labelnode (car lnode))
+  (amap (plump:attributes labelnode)))
+  (maphash #'(lambda (key value) 
+             (plump:REMOVE-ATTRIBUTE labelnode key)) amap)
+   (plump:first-child node)))
