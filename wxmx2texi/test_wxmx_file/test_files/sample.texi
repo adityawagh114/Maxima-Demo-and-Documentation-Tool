@@ -1,0 +1,309 @@
+ \input texinfo 
+
+@node Top, Cell1,(dir),(dir)
+@top
+
+ 
+ 
+ 
+ 
+  @node Cell1,Cell2,Top,Top
+
+
+@chapter  All cell types 
+  
+ 
+ 
+ 
+@node Cell2,Cell3,Cell1,Top
+
+                  
+
+@section  Subsection cells 
+  
+ 
+ 
+ 
+@node Cell3,Cell4,Cell2,Top
+
+                  
+
+@subsection  Sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell4,Cell5,Cell3,Top
+
+                  
+
+@subsubsection  Sub-sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell5,Cell6,Cell4,Top
+
+                  
+
+@subsubsection  Sub-sub-sub-sub-section cells 
+  
+ 
+ 
+ 
+@node Cell6,Cell7,Cell5,Top
+
+                  
+
+@section  A text cell 
+  
+ 
+ 
+ 
+@node Cell7,Cell8,Cell6,Top
+
+                  
+
+Input:
+@example
+        genmatrix(lambda([i, j], 1/(i + j - 1)), 7, 7);
+@end example 
+
+@c Maxima expression:-
+  @c  matrix([1,1/2,1/3,1/4,1/5,1/6,1/7],[1/2,1/3,1/4,1/5,1/6,1/7,1/8],[1/3,1/4,1/5,1/6,1/7,1/8,1/9],[1/4,1/5,1/6,1/7,1/8,1/9,1/10],[1/5,1/6,1/7,1/8,1/9,1/10,1/11],[1/6,1/7,1/8,1/9,1/10,1/11,1/12],[1/7,1/8,1/9,1/10,1/11,1/12,1/13])
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+[    1  1  1   1   1   1  ]
+[ 1  -  -  -   -   -   -  ]
+[    2  3  4   5   6   7  ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  -   -   -   -  ]
+[ 2  3  4  5   6   7   8  ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  -   -   -   -  ]
+[ 3  4  5  6   7   8   9  ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  -   -   -   -- ] 
+[ 4  5  6  7   8   9   10 ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  -   -   --  -- ]
+[ 5  6  7  8   9   10  11 ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  -   --  --  -- ]
+[ 6  7  8  9   10  11  12 ]
+[                         ]
+[ 1  1  1  1   1   1   1  ]
+[ -  -  -  --  --  --  -- ]
+[ 7  8  9  10  11  12  13 ]
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ \ifx\endpmatrix\undefined\pmatrix{\else\begin{pmatrix}\fi 1&{{1}\over{2}}&{{1}\over{3}}&{{1}\over{4}}&{{1}\over{5}}&{{1}\over{6}}&{{1}\over{7}}\cr {{1}\over{2}}&{{1}\over{3}}&{{1}\over{4}}&{{1}\over{5}}&{{1}\over{6}}&{{1}\over{7}}&{{1}\over{8}}\cr {{1}\over{3}}&{{1}\over{4}}&{{1}\over{5}}&{{1}\over{6}}&{{1}\over{7}}&{{1}\over{8}}&{{1}\over{9}}\cr {{1}\over{4}}&{{1}\over{5}}&{{1}\over{6}}&{{1}\over{7}}&{{1}\over{8}}&{{1}\over{9}}&{{1}\over{10}}\cr {{1}\over{5}}&{{1}\over{6}}&{{1}\over{7}}&{{1}\over{8}}&{{1}\over{9}}&{{1}\over{10}}&{{1}\over{11}}\cr {{1}\over{6}}&{{1}\over{7}}&{{1}\over{8}}&{{1}\over{9}}&{{1}\over{10}}&{{1}\over{11}}&{{1}\over{12}}\cr {{1}\over{7}}&{{1}\over{8}}&{{1}\over{9}}&{{1}\over{10}}&{{1}\over{11}}&{{1}\over{12}}&{{1}\over{13}}\cr \ifx\endpmatrix\undefined}\else\end{pmatrix}\fi $$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell8,Cell9,Cell7,Top
+
+                  
+
+Input:
+@example
+        f(x):=3*x^2*tan(5*x^2)$
+        D:'diff(f(x),x,2)$
+        D=ev(D,nouns);
+@end example 
+
+@c Maxima expression:-
+  @c  'diff(3*x^2*''tan(5*x^2),"x","2") = 600*x^4*''sec(5*x^2)^2*''tan(5*x^2)+6*''tan(5*x^2)+150*x^2*''sec(5*x^2)^2
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+ 2
+d       2        2          4    2    2         2             2
+--- (3 x  tan(5 x )) = 600 x  sec (5 x ) tan(5 x ) + 6 tan(5 x )
+  2
+dx
+                                                                  2    2    2
+                                                           + 150 x  sec (5 x ) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ {{d^{\mbox{ 2 }}}\over{d\,\mbox{ x }^{\mbox{ 2 }}}}\,\left(3\,x^2\,{\it tan}\left(5\,x^2\right)\right)=600\,x^4\,{\it sec}\left(5\,x^2\right)^2\,{\it tan}\left(5\,x^2\right)+6\,{\it tan}\left(5\,x^2\right)+150\,x^2\,{\it sec}\left(5\,x^2\right)^2$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell9,Cell10,Cell8,Top
+
+                  
+
+Input:
+@example
+         limit ((x^2 + x - 6)/(x^4 + x^3 - 19*x^2 + 11*x + 30), x, 2);
+@end example 
+
+@c Maxima expression:-
+  @c  -5/21
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+  5
+- -- 
+  21
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ -{{5}\over{21}}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell10,Cell11,Cell9,Top
+
+                  
+
+Input:
+@example
+        integrate(x/(x^3 + 1), x);
+@end example 
+
+@c Maxima expression:-
+  @c  ''log(x^2-x+1)/6+''atan((2*x-1)/sqrt(3))/sqrt(3)-''log(x+1)/3
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+                       2 x - 1
+     2            atan(-------)
+log(x  - x + 1)        sqrt(3)    log(x + 1)
+--------------- + ------------- - ---------- 
+       6             sqrt(3)          3
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ {{{\it log}\left(x^2-x+1\right)}\over{6}}+{{{\it atan}\left({{2\,x-1}\over{\sqrt{3}}}\right)}\over{\sqrt{3}}}-{{{\it log}\left(x+1\right)}\over{3}}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell11,Cell12,Cell10,Top
+
+                  
+
+Input:
+@example
+        sqrt(x(1));
+        sqrt(x(10));
+        
+@end example 
+
+@c Maxima expression:-
+  @c  sqrt(x(1)), sqrt(x(10))
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+sqrt(x(1)) 
+sqrt(x(10)) 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ \sqrt{x\left(1\right)}, \sqrt{x\left(10\right)}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell12,Cell13,Cell11,Top
+
+                  
+
+Input:
+@example
+         sum(1/x^2, x, 1, inf);
+@end example 
+
+@c Maxima expression:-
+  @c  'sum(1/x^2,x,1,inf)
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+inf
+====
+\     1
+ >    -- 
+/      2
+====  x
+x = 1
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ \sum_{x=1}^{\infty }{{{1}\over{x^2}}}$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@node Cell13, ,Cell12,Top
+
+
+      
+Input:
+@example
+        "This is an example string.";
+@end example 
+
+@c Maxima expression:-
+  @c  "This is an example string."
+@c Simplified 2D:- 
+
+Output:
+@ifinfo
+@example 
+This is an example string. 
+
+@end example 
+@end ifinfo
+@iftex
+@tex
+$$ \mbox{ This is an example string. }$$
+@end tex
+@end iftex  
+ 
+ 
+ 
+@bye
+ 
