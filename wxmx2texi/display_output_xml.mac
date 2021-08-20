@@ -24,9 +24,12 @@ display_output_xml (f%,[location]) :=
                                    (if (tokens[i+1]= ?makealias("[")) then([]) else 
                                       (push(tokens[i],temp))),
                                     push('matrix,temp),
-                                   tokens:temp),                
-                                 e: second (parse_token_list (tokens)),
-                                 hh: display_expression_from (tokens),
+                                   tokens:temp),     
+                                      kk:errcatch(parse_token_list(tokens)), 
+                                      if length(kk)>0 then        
+                                 e: second (kk[1]) else e:"",
+                                 ll:errcatch(display_expression_from (tokens)),
+                                 if length(ll)>0 then hh:ll[1] else hh:"",
                                  file_output_append:true,
                                  (if emptyp(location) then [] else with_stdout(location[1],print(hh))),
                                  str1:sconcat(str1,", ",string (e)),
